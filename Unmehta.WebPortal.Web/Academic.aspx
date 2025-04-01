@@ -19,7 +19,7 @@
 			<div class="container">
 				<div class="row">
 					<%=strMedicalMain %>
-				</div>
+				</div> 
 			</div>
 		</div>
 </asp:Content>
