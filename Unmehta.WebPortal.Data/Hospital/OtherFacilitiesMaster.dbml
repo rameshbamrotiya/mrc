@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="OtherFacilitiesMasterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.2;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GetAllOurFacilitiesMasterSubDetails" Method="GetAllOurFacilitiesMasterSubDetails">
+    <Parameter Name="OurFacillityId" Parameter="ourFacillityId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllOurFacilitiesMasterSubDetailsResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OurFacillityId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="LanguageId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SequanceNo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeleteBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DeleteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllOurFacilitiesMasterSubDetailsImage" Method="GetAllOurFacilitiesMasterSubDetailsImage">
+    <Parameter Name="OurFacillitySubId" Parameter="ourFacillitySubId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllOurFacilitiesMasterSubDetailsImageResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OurFacillityId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="LanguageId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="OurFacillitySubId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ImageName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateOurFacilitiesMasterSubDetails" Method="InsertOrUpdateOurFacilitiesMasterSubDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="OurFacillityId" Parameter="ourFacillityId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="SequanceNo" Parameter="sequanceNo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Title" Parameter="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="InsertOrUpdateOurFacilitiesMasterSubDetailsResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOurFacilitiesMasterSubDetails" Method="InsertOurFacilitiesMasterSubDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="OurFacillityId" Parameter="ourFacillityId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="OurFacillitySubId" Parameter="ourFacillitySubId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ImageName" Parameter="imageName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveOtherFacilitiesMaster" Method="RemoveOtherFacilitiesMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveOurFacilitiesMasterSubDetails" Method="RemoveOurFacilitiesMasterSubDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveOurFacilitiesMasterSubDetailsImage" Method="RemoveOurFacilitiesMasterSubDetailsImage">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetAllOtherFacilitiesMaster" Method="GetAllOtherFacilitiesMaster">
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllOtherFacilitiesMasterResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OurFacillityId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="LanguageId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="VideoLink" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SideImage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeleteBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DeleteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateOtherFacilitiesMaster" Method="InsertOrUpdateOtherFacilitiesMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Title" Parameter="title" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="VideoLink" Parameter="videoLink" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="SideImage" Parameter="sideImage" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsVisible" Parameter="isVisible" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="InsertOrUpdateOtherFacilitiesMasterResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="RecSubId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.OurFacilitiesMasterSubDetailsSwap" Method="OurFacilitiesMasterSubDetailsSwap">
+    <Parameter Name="cmd" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="currentColMenuLevel" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="Packageid" Parameter="packageid" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

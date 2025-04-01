@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="HeaderFooterMasterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.2;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString2" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GetAllReasearch" Method="GetAllReasearch">
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllReasearchResult">
+      <Column Name="AD_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Articles_Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Publication_Year" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="Web_link" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Author" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Publication_Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ArticleType" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Publication_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetHeaderFooter" Method="GetHeaderFooter">
+    <ElementType Name="GetHeaderFooterResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="HeaderDetails" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="HeaderLogo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FooterLogo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FooterDetails" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeleteBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DeleteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateHeaderFooterMaster" Method="InsertOrUpdateHeaderFooterMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="HeaderDetails" Parameter="headerDetails" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="HeaderLogo" Parameter="headerLogo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="FooterLogo" Parameter="footerLogo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="FooterDetails" Parameter="footerDetails" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

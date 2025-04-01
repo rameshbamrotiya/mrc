@@ -1,0 +1,361 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="LTEStudent.master.cs" Inherits="Unmehta.WebPortal.Web.Admission.LTEStudent" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link type="image/x-icon" href="<%= ResolveUrl("~/Hospital/assets/img/favicon.png")%>" rel="icon" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>
+        <asp:ContentPlaceHolder ID="Title" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+
+    <link rel="stylesheet" href="../plugins/select2/css/select2.min.css">
+    <link rel="stylesheet" href="../plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css">
+
+    <link rel="shortcut icon" href="<%= ResolveUrl("~/Admin/Template/html/assets/media/image/favicon.png")%>" />
+
+    <!-- Plugin styles -->
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Admin/Template/html/vendors/bundle.css")%>" type="text/css" />
+
+    <!-- DataTable -->
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Admin/Template/html/vendors/dataTable/dataTables.min.css")%>" type="text/css" />
+
+    <!-- Prism -->
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Admin/Template/html/vendors/prism/prism.css")%>" type="text/css" />
+
+    <!-- Datepicker -->
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Admin/Template/html/vendors/datepicker/daterangepicker.css?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>">
+
+    <!-- Clockpicker -->
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Admin/Template/html/vendors/clockpicker/bootstrap-clockpicker.min.css?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>" type="text/css">
+
+    <!-- Css -->
+    <link href="<%= ResolveUrl("~/Admin/Script/jquery-ui.css")%>" rel="stylesheet" type="text/css" />
+
+
+    <!-- Vmap -->
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Admin/Template/html/vendors/vmap/jqvmap.min.css")%>" />
+
+    <!-- App styles -->
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Admin/Template/html/assets/css/app.min.css")%>" type="text/css" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <link href="<%= ResolveUrl("~/Hospital/assets/css/toastr.min.css?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>" rel="stylesheet" />
+
+    <script src="<%= ResolveUrl("~/Hospital/assets/js/jquery.min.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+    <script src="<%= ResolveUrl("~/Hospital/assets/js/toastr.min.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+
+    <script>
+
+        function TosterMessage(message, strType) {
+            toastr.options = {
+                timeOut: 4e3,
+                progressBar: !0,
+                showMethod: "slideDown",
+                hideMethod: "slideUp",
+                showDuration: 700,
+                hideDuration: 200,
+                positionClass: "toast-top-center"
+            };
+
+            switch (strType) {
+                case "success": toastr.success(message); break;
+                case "error": toastr.error(message); break;
+                case "warning": toastr.warning(message); break;
+                case "info": toastr.info(message); break;
+            }
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="Top" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <!-- Site wrapper -->
+            <div class="wrapper">
+                <!-- Navbar -->
+                <nav class="main-header navbar navbar-expand navbar-white navbar-light ml-0">
+                    <!-- Left navbar links -->
+                    <ul class="navbar-nav d-none">
+                        <li class="nav-item">
+                            <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+                        </li>
+                    </ul>
+
+                    <!-- Right navbar links -->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item mr-3">
+                            <asp:Label runat="server" ID="lblWelcomName"></asp:Label>
+                        </li>
+                        <li class="nav-item mr-3">
+                            <a href="<%= ResolveUrl("~/Admin/Admission/changePassword.aspx") %>" onclick="return confirm('Are you shure do you want to Change password?');" class="">
+                                <b><span class="hidden-xs" title="Change Password">Change Password</span></b>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="<%= ResolveUrl("~/Admission/LogOut.aspx") %>" onclick="return confirm('Are you shure do you want to logout?');" class="">
+                                <b><span class="hidden-xs" title="Logout">Logout <i class="fas fa-sign-out-alt ml-1" aria-hidden="true"></i></span></b>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.navbar -->
+              <%--  <marquee width="100%" direction="left" style="font-weight: bold; color: darkblue; font-size: 17px; margin-top: 8px;">
+Due to server maintenance activity, this portal will remain down on 22-JUNE-2023 from 12:30 PM to 01:30 PM.
+</marquee>--%>
+                <!-- Main Sidebar Container -->
+                <aside class="main-sidebar sidebar-dark-primary elevation-4 d-none">
+                    <!-- Brand Logo -->
+                    <a href="#" class="brand-link">
+                        <img src="../../dist/img/AdminLTELogo.png" alt="Student Registration" class="brand-image img-circle elevation-3" style="opacity: .8">
+                        <span class="brand-text font-weight-light">Student Registration</span>
+                    </a>
+
+                    <!-- Sidebar -->
+                    <div class="sidebar">
+                        <!-- Sidebar user (optional) -->
+
+
+                        <!-- SidebarSearch Form -->
+
+
+                        <!-- Sidebar Menu -->
+                        <nav class="mt-2">
+                            <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                                <!-- Add icons to the links using the .nav-icon class
+               with font-awesome or any other icon font library -->
+
+                                <li class="nav-item">
+                                    <a href="<%= ResolveUrl("~/Admission/Course.aspx") %>" class="nav-link">
+                                        <i class="nav-icon fas fa-keyboard"></i>
+                                        <p>
+                                            Registration
+                                        </p>
+                                    </a>
+                                </li>
+                                <%-- <li class="nav-item">
+                                    <a href="PrintApplication.aspx" class="nav-link">
+                                        <i class="nav-icon fas fa-print"></i>
+                                        <p>
+                                            Print Application
+                                        </p>
+                                    </a>
+                                </li>--%>
+                                <li class="nav-item">
+                                    <a href="<%= ResolveUrl("~/Admission/ApplicationList.aspx") %>" class="nav-link">
+                                        <i class="nav-icon fas fa-credit-card"></i>
+                                        <p>
+                                            Fee Payment
+                                        </p>
+                                    </a>
+                                </li>
+                                <%-- <li class="nav-item">
+                                    <a href="StudentCourseSequence.aspx" class="nav-link">
+                                        <i class="nav-icon fas fa-check"></i>
+                                        <p>
+                                            Choice Feeling
+                                        </p>
+                                    </a>
+                                </li>
+                                   <li class="nav-item">
+                                    <a href="MeritList.aspx" class="nav-link">
+                                        <i class="nav-icon fas fa-list-alt"></i>
+                                        <p>
+                                            Marit List
+                                        </p>
+                                    </a>
+                                </li>--%>
+                            </ul>
+                        </nav>
+                        <!-- /.sidebar-menu -->
+                    </div>
+                    <!-- /.sidebar -->
+                </aside>
+
+                <!-- Content Wrapper. Contains page content -->
+                <div class="content-wrapper ml-0">
+                    <!-- Content Header (Page header) -->
+                    <section class="content-header">
+                        <div class="container-fluid">
+                        </div>
+                        <!-- /.container-fluid -->
+                    </section>
+                    <asp:ContentPlaceHolder ID="Header" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <!-- Main content -->
+                    <section class="content">
+
+                        <!-- Default box -->
+
+                        <asp:ContentPlaceHolder ID="Body" runat="server">
+                        </asp:ContentPlaceHolder>
+                        <!-- /.card -->
+
+                    </section>
+                    <!-- /.content -->
+                </div>
+                <!-- /.content-wrapper -->
+
+                <footer class="main-footer ml-0">
+                    <%--<div class="float-right d-none d-sm-block">
+                        <b>Version</b> 3.1.0
+   
+                    </div>--%>
+                    <strong>Copyright &copy; 2014-2021 <a href="#">U N Mehta</a>.</strong> All rights reserved.
+ 
+                </footer>
+
+                <!-- Control Sidebar -->
+                <aside class="control-sidebar control-sidebar-dark">
+                    <!-- Control sidebar content goes here -->
+                </aside>
+                <!-- /.control-sidebar -->
+            </div>
+        </div>
+    </form>
+    <!-- jQuery -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../dist/js/adminlte.min.js"></script>
+    <!-- AdminLTE for demo purposes -->
+    <script src="../dist/js/demo.js"></script>
+    <script src="../plugins/select2/js/select2.full.min.js"></script>
+    <script src="../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+    <script src="<%= ResolveUrl("~/dist/js/CustomValidation.js") %>"></script>
+
+    <!-- Plugin scripts -->
+    <script src="<%= ResolveUrl("~/Admin/Template/html/vendors/bundle.js")%>"></script>
+
+    <!-- Chartjs -->
+    <script src="<%= ResolveUrl("~/Admin/Template/html/vendors/charts/chartjs/chart.min.js")%>"></script>
+
+    <!-- Apex chart -->
+    <script src="<%= ResolveUrl("~/Admin/Template/html/vendors/charts/apex/apexcharts.min.js")%>"></script>
+
+    <!-- Circle progress -->
+    <script src="<%= ResolveUrl("~/Admin/Template/html/vendors/circle-progress/circle-progress.min.js")%>"></script>
+
+    <!-- Peity -->
+    <script src="<%= ResolveUrl("~/Admin/Template/html/vendors/charts/peity/jquery.peity.min.js")%>"></script>
+    <script src="<%= ResolveUrl("~/Admin/Template/html/assets/js/examples/charts/peity.js")%>"></script>
+
+    <!-- Clockpicker -->
+    <script src="<%= ResolveUrl("~/Admin/Template/html/vendors/clockpicker/bootstrap-clockpicker.min.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+
+    <!-- Datepicker -->
+    <script src="<%= ResolveUrl("~/Admin/Template/html/vendors/datepicker/daterangepicker.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+
+    <!-- Slick -->
+    <script src="<%= ResolveUrl("~/Admin/Template/html/vendors/slick/slick.min.js")%>"></script>
+
+
+    <!-- DataTable -->
+    <script src="<%= ResolveUrl("~/Admin/Template/html/vendors/dataTable/jquery.dataTables.min.js")%>"></script>
+    <script src="<%= ResolveUrl("~/Admin/Template/html/vendors/dataTable/dataTables.bootstrap4.min.js")%>"></script>
+    <script src="<%= ResolveUrl("~/Admin/Template/html/vendors/dataTable/dataTables.responsive.min.js")%>"></script>
+    <script src="<%= ResolveUrl("~/Admin/Template/html/assets/js/examples/datatable.js")%>"></script>
+
+    <!-- Prism -->
+    <script src="<%= ResolveUrl("~/Admin/Template/html/vendors/prism/prism.js")%>"></script>
+
+    <!-- Vamp -->
+    <script src="<%= ResolveUrl("~/Admin/Template/html/vendors/vmap/jquery.vmap.min.js")%>"></script>
+    <script src="<%= ResolveUrl("~/Admin/Template/html/vendors/vmap/maps/jquery.vmap.usa.js")%>"></script>
+    <script src="<%= ResolveUrl("~/Admin/Template/html/assets/js/examples/vmap.js")%>"></script>
+    <script src="<%= ResolveUrl("~/Admin/Script/MainPage.js")%>"></script>
+    <script src="<%= ResolveUrl("~/Admin/Script/App.js")%>"></script>
+
+    <script language="JavaScript" type="text/javascript">
+        javascript: window.history.forward(1);
+
+        function isNumberKey(e) {
+            var result = false;
+            try {
+                var charCode = (e.which) ? e.which : e.keyCode;
+                if ((charCode > 31) && (charCode >= 48 && charCode <= 57)) {
+                    result = true;
+                }
+            }
+            catch (err) {
+                //console.log(err);
+            }
+            return result;
+        }
+
+        function isNumberKeyWithDot(e) {
+            var result = false;
+            try {
+                var charCode = (e.which) ? e.which : e.keyCode;
+                if ((charCode > 31) && (charCode >= 48 && charCode <= 57) || charCode == 46) {
+                    result = true;
+                }
+            }
+            catch (err) {
+                //console.log(err);
+            }
+            return result;
+        }
+
+        function lettersOnly() {
+            var charCode = event.keyCode;
+
+            if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 8)
+
+                return true;
+            else
+                return false;
+        }
+
+        $('.decimal').keyup(function () {
+            var val = $(this).val();
+            if (isNaN(val)) {
+                val = val.replace(/[^0-9\.]/g, '');
+                if (val.split('.').length > 2)
+                    val = val.replace(/\.+$/, "");
+            }
+            $(this).val(val);
+        });
+
+        function lettersWithSpaceOnly() {
+            var charCode = event.keyCode;
+            if (val.split('.').length > 2)
+                val = val.replace(/\.+$/, "");
+            if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 8 || charCode == 32)
+
+                return true;
+            else
+                return false;
+        }
+    </script>
+    <script>
+        $(function () {
+            //Initialize Select2 Elements
+            $('.select2').select2()
+
+            //Initialize Select2 Elements
+            $('.select2bs4').select2({
+                theme: 'bootstrap4'
+            })
+
+        })
+    </script>
+    <asp:ContentPlaceHolder ID="Bottom" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

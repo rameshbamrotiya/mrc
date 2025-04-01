@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="DailyEntryVisitMasterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.2;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString2" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GetAllDailyVisitCategoryMaster" Method="GetAllDailyVisitCategoryMaster">
+    <ElementType Name="GetAllDailyVisitCategoryMasterResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DailyCatagoryName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeleteBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DeleteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.RemoveDailyEntryVisitMaster" Method="RemoveDailyEntryVisitMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveDailyVisitCategoryMaster" Method="RemoveDailyVisitCategoryMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertOrUpdateDailyVisitCategoryMaster" Method="InsertOrUpdateDailyVisitCategoryMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="DailyCatagoryName" Parameter="dailyCatagoryName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="InsertOrUpdateDailyVisitCategoryMasterResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllDailyEntryVisitMaster" Method="GetAllDailyEntryVisitMaster">
+    <ElementType Name="GetAllDailyEntryVisitMasterResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DailyCatId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EntryName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FileName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="VisitCount" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="PDFFileName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EntryDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IsVisable" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CreateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeleteBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DeleteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DailyCatagoryName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateDailyEntryVisitMaster" Method="InsertOrUpdateDailyEntryVisitMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="DailyCatId" Parameter="dailyCatId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="VisitCount" Parameter="visitCount" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EntryName" Parameter="entryName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="FileName" Parameter="fileName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="PDFFileName" Parameter="pDFFileName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="EntryDate" Parameter="entryDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="IsVisable" Parameter="isVisable" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="InsertOrUpdateDailyEntryVisitMasterResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

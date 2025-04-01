@@ -1,0 +1,302 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="StudentAdmission.Master.cs" Inherits="Unmehta.WebPortal.Web.Admission.StudentAdmission" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder ID="Title" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+    <asp:ContentPlaceHolder ID="Head" runat="server">
+    </asp:ContentPlaceHolder>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicons -->
+    <link type="image/x-icon" href="<%= ResolveUrl("~/Hospital/assets/img/favicon.png?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>" rel="icon" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Hospital/assets/css/bootstrap.min.css?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>">
+    <!-- Fontawesome CSS -->
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Hospital/assets/css/magnific-popup.css?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>">
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Hospital/assets/plugins/fontawesome/css/fontawesome.min.css?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>">
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Hospital/assets/plugins/fontawesome/css/all.min.css?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>">
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Hospital/assets/css/modal-video.min.css?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>">
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Hospital/assets/css/owl.carousel.min.css?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>">
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Hospital/assets/css/owl.theme.default.min.css?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>">
+    <!-- Select2 CSS -->
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Hospital/assets/plugins/select2/css/select2.min.css?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>">
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Hospital/assets/plugins/fancybox/jquery.fancybox.min.css?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>">
+    <!-- Datetimepicker CSS -->
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Hospital/assets/css/bootstrap-datetimepicker.min.css?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Hospital/assets/css/style.css?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>">
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Hospital/assets/css/custom.css?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>">
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Hospital/assets/css/responsive.css?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>">
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Hospital/assets/css/rs-spacing.css?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>">
+    <!-- rvslider -->
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Hospital/assets/revolution/css/layers.css?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>">
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Hospital/assets/revolution/css/navigation.css?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>">
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Hospital/assets/revolution/css/settings.css?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>">
+    <link rel="stylesheet" href="<%= ResolveUrl("~/Hospital/assets/css/innerpage.css?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>">
+
+    
+      <!-- Plugin styles -->
+    <link href="<%= ResolveUrl("~/Hospital/assets/css/toastr.min.css?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>" rel="stylesheet" />
+
+    <script src="<%= ResolveUrl("~/Hospital/assets/js/jquery.min.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+    <script src="<%= ResolveUrl("~/Hospital/assets/js/toastr.min.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+    <script src="<%= ResolveUrl("~/Recruitment/Script/CountryStateCity.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+
+    <script>
+
+        function TosterMessage(message, strType) {
+            toastr.options = {
+                timeOut: 4e3,
+                progressBar: !0,
+                showMethod: "slideDown",
+                hideMethod: "slideUp",
+                showDuration: 700,
+                hideDuration: 200,
+                positionClass: "toast-top-center"
+            };
+
+            switch (strType) {
+                case "success": toastr.success(message); break;
+                case "error": toastr.error(message); break;
+                case "warning": toastr.warning(message); break;
+                case "info": toastr.info(message); break;
+            }
+        }
+    </script>
+    <asp:ContentPlaceHolder ID="Top" runat="server">
+    </asp:ContentPlaceHolder>
+    <style>
+body {
+  font-family: "Lato", sans-serif;
+}
+
+/* Fixed sidenav, full height */
+.sidenav {
+  height: 100%;
+  width: 200px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #b00d38;
+  overflow-x: hidden;
+  padding-top: 20px;
+}
+
+/* Style the sidenav links and the dropdown button */
+.sidenav a, .dropdown-btn {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  display: block;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+}
+
+/* On mouse-over */
+.sidenav a:hover, .dropdown-btn:hover {
+  color: #073d83;
+}
+
+/* Main content */
+.main {
+  margin-left: 200px; /* Same as the width of the sidenav */
+  font-size: 20px; /* Increased text to enable scrolling */
+  padding: 0px 10px;
+}
+
+/* Add an active class to the active dropdown button */
+.active {
+  background-color: green;
+  color: white;
+}
+
+/* Dropdown container (hidden by default). Optional: add a lighter background color and some left padding to change the design of the dropdown content */
+.dropdown-container {
+  display: none;
+  background-color: #262626;
+  padding-left: 8px;
+}
+
+/* Optional: Style the caret down icon */
+.fa-caret-down {
+  float: right;
+  padding-right: 8px;
+}
+
+/* Some media queries for responsiveness */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+  <%--  <!-- Preloader -->
+    <div id="loading" class="icon-preloader">
+        <div class="loader">
+            <div class="animate3">
+                <img src="<%= ResolveUrl("~/Hospital/assets/img/loader.gif?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>" alt="Preloader Image animate3">
+            </div>
+        </div>
+    </div>--%>
+    <form id="form1" runat="server" autocomplete="off">
+        <div class="sidenav">
+  <a href="StudentRegistration.aspx"> <i class="fa fa-file"></i>Registration</a>
+  <a href="PrintApplication.aspx"> <i class="fa fa-print"></i>Print Application</a>
+  <a href="ApplicationList.aspx"> <i class="fa fa-credit-card"></i>Fee Payment</a>
+  <a href="StudentCourseSequence.aspx"> <i class="fa fa-check"></i>Choice Feeling</a>
+<%--  <button class="dropdown-btn">Dropdown 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div>--%>
+  <a href="MeritList.aspx"> <i class="fa fa-list-alt"></i>Marit List</a>
+</div>
+        <div>
+            <!-- Main Wrapper -->
+            <div class="main-wrapper">
+                <!-- Header -->
+
+                <!-- /Header -->
+                <!-- Breadcrumb -->
+
+                <asp:ContentPlaceHolder ID="Header" runat="server">
+                </asp:ContentPlaceHolder>
+                <!-- /Breadcrumb -->
+                <!-- Page Content -->
+                <div class="content">
+                    <div class="container" style="max-width:1160px; float:right;">
+
+                        <asp:ContentPlaceHolder ID="Body" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+                </div>
+                <!-- /Page Content -->
+                <!-- Footer -->
+
+                <!-- /Footer -->
+            </div>
+            <!-- /Main Wrapper -->
+        </div>
+    </form>
+
+
+    <script src="<%= ResolveUrl("~/Hospital/assets/js/jquery.min.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+    <!-- Bootstrap Core JS -->
+    <script src="<%= ResolveUrl("~/Hospital/assets/js/popper.min.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+    <script src="<%= ResolveUrl("~/Hospital/assets/js/bootstrap.min.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+    <script src="<%= ResolveUrl("~/Hospital/assets/js/wow.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+    <script src="<%= ResolveUrl("~/Hospital/assets/js/owl.carousel.min.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+    <!-- Slick JS -->
+    <script src="<%= ResolveUrl("~/Hospital/assets/js/jquery-modal-video.min.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+    <script src="<%= ResolveUrl("~/Hospital/assets/js/slick.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+
+    <!-- Custom JS -->
+    <!-- Datetimepicker JS -->
+    <script src="<%= ResolveUrl("~/Hospital/assets/js/moment.min.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+    <script src="<%= ResolveUrl("~/Hospital/assets/js/bootstrap-datetimepicker.min.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+    <!-- Fancybox JS -->
+    <script src="<%= ResolveUrl("~/Hospital/assets/plugins/fancybox/jquery.fancybox.min.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+    <!-- Select2 JS -->
+    <script src="<%= ResolveUrl("~/Hospital/assets/plugins/select2/js/select2.min.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+
+    <script src="<%= ResolveUrl("~/Hospital/assets/js/script.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+    <script src="<%= ResolveUrl("~/Hospital/assets/js/custom.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+
+    <!-- revolution slider js -->
+    <script src="<%= ResolveUrl("~/Hospital/assets/revolution/js/jquery.themepunch.tools.min.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+    <script src="<%= ResolveUrl("~/Hospital/assets/revolution/js/jquery.themepunch.revolution.min.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+    <script src="<%= ResolveUrl("~/Hospital/assets/revolution/js/extensions/revolution.extension.actions.min.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+    <script src="<%= ResolveUrl("~/Hospital/assets/revolution/js/extensions/revolution.extension.carousel.min.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+    <script src="<%= ResolveUrl("~/Hospital/assets/revolution/js/extensions/revolution.extension.kenburn.min.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+    <script src="<%= ResolveUrl("~/Hospital/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+    <script src="<%= ResolveUrl("~/Hospital/assets/revolution/js/extensions/revolution.extension.migration.min.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+    <script src="<%= ResolveUrl("~/Hospital/assets/revolution/js/extensions/revolution.extension.navigation.min.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+    <script src="<%= ResolveUrl("~/Hospital/assets/revolution/js/extensions/revolution.extension.parallax.min.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+    <script src="<%= ResolveUrl("~/Hospital/assets/revolution/js/extensions/revolution.extension.slideanims.min.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+    <script src="<%= ResolveUrl("~/Hospital/assets/revolution/js/extensions/revolution.extension.video.min.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+    
+    <script language="JavaScript" type="text/javascript">
+
+
+        javascript: window.history.forward(1);
+
+        function isNumberKey(e) {
+            var result = false;
+            try {
+                var charCode = (e.which) ? e.which : e.keyCode;
+                if ((charCode >31) && (charCode >= 48 && charCode <= 57)) {
+                    result = true;
+                }
+            }
+            catch (err) {
+                //console.log(err);
+            }
+            return result;
+        }
+
+        function isNumberKeyWithDot(e) {
+            var result = false;
+            try {
+                var charCode = (e.which) ? e.which : e.keyCode;
+                if ((charCode > 31) && (charCode >= 48 && charCode <= 57) || charCode == 46) {
+                    result = true;
+                }
+            }
+            catch (err) {
+                //console.log(err);
+            }
+            return result;
+        }
+
+        function lettersOnly() {
+            var charCode = event.keyCode;
+
+            if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 8)
+
+                return true;
+            else
+                return false;
+        }
+
+        $('.decimal').keyup(function () {
+            var val = $(this).val();
+            if (isNaN(val)) {
+                val = val.replace(/[^0-9\.]/g, '');
+                if (val.split('.').length > 2)
+                    val = val.replace(/\.+$/, "");
+            }
+            $(this).val(val);
+        });
+
+        function lettersWithSpaceOnly() {
+            var charCode = event.keyCode;
+            if (val.split('.').length > 2)
+                val = val.replace(/\.+$/, "");
+            if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 8 || charCode == 32)
+
+                return true;
+            else
+                return false;
+        }
+    </script>
+    
+    <asp:ContentPlaceHolder ID="Bottom" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>

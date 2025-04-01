@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="ChatBoxMasterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.2;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString2" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GetAllChatBotDetails" Method="GetAllChatBotDetails">
+    <ElementType Name="GetAllChatBotDetailsResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsSkipEmail" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="EmailId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="YouLocation" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Phone" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsSkipPastMedicalHistory" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PastMedicalHistory" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsSkipPresentMedicalHistory" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="PresentMedicalHistory" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="WriteQuery" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IPAddress" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EntryDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertChatBotDetails" Method="InsertChatBotDetails">
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsSkipEmail" Parameter="isSkipEmail" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="EmailId" Parameter="emailId" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="YouLocation" Parameter="youLocation" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Phone" Parameter="phone" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsSkipPastMedicalHistory" Parameter="isSkipPastMedicalHistory" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PastMedicalHistory" Parameter="pastMedicalHistory" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsSkipPresentMedicalHistory" Parameter="isSkipPresentMedicalHistory" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="PresentMedicalHistory" Parameter="presentMedicalHistory" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="WriteQuery" Parameter="writeQuery" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IPAddress" Parameter="iPAddress" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveChatBotDetails" Method="RemoveChatBotDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

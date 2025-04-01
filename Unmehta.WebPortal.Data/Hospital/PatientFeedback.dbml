@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="PatientFeedbackDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.21,1433;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GetPatientFeedbackById" Method="GetPatientFeedbackById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetPatientFeedbackByIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MobileNo" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="EmailId" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="FeedBackDetails" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.RemovePatientFeedback" Method="RemovePatientFeedback">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertOrUpdatePatientFeedback" Method="InsertOrUpdatePatientFeedback">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(300)" />
+    <Parameter Name="Gender" Parameter="gender" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="MobileNo" Parameter="mobileNo" Type="System.String" DbType="NVarChar(20)" />
+    <Parameter Name="EmailId" Parameter="emailId" Type="System.String" DbType="NVarChar(300)" />
+    <Parameter Name="FeedBackDetails" Parameter="feedBackDetails" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsVisible" Parameter="isVisible" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="InsertOrUpdatePatientFeedbackResult">
+      <Column Name="RecId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllPatientFeedback" Method="GetAllPatientFeedback">
+    <Parameter Name="LangId" Parameter="langId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllPatientFeedbackResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="VarChar(10)" CanBeNull="true" />
+      <Column Name="MobileNo" Type="System.String" DbType="NVarChar(20)" CanBeNull="true" />
+      <Column Name="EmailId" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="FeedBackDetails" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

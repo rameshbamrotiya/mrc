@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="StatisticsChartMasterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.2;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GetAllStatisticsChartMasterColumnListByChartId" Method="GetAllStatisticsChartMasterColumnListByChartId">
+    <Parameter Name="ChartId" Parameter="chartId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllStatisticsChartMasterColumnListByChartIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ChartId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="SequanceNo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="TypeColumn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ColName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeleteBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DeleteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateStatisticsChartMasterColumnList" Method="InsertOrUpdateStatisticsChartMasterColumnList">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ChartId" Parameter="chartId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="SequanceNo" Parameter="sequanceNo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="TypeColumn" Parameter="typeColumn" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ColName" Parameter="colName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="InsertOrUpdateStatisticsChartMasterColumnListResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.RemvoeStatisticsChartMaster" Method="RemvoeStatisticsChartMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemvoeStatisticsChartMasterColumnList" Method="RemvoeStatisticsChartMasterColumnList">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemvoeStatisticsChartMasterColumnListByChartId" Method="RemvoeStatisticsChartMasterColumnListByChartId">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemvoeStatisticsChartMasterDetails" Method="RemvoeStatisticsChartMasterDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemvoeStatisticsChartMasterDetailsByChartId" Method="RemvoeStatisticsChartMasterDetailsByChartId">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertOrUpdateStatisticsChartMaster" Method="InsertOrUpdateStatisticsChartMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ChartName" Parameter="chartName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ChartType" Parameter="chartType" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="XValueName" Parameter="xValueName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="YValueName" Parameter="yValueName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="XValueFormate" Parameter="xValueFormate" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="InsertOrUpdateStatisticsChartMasterResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateStatisticsChartMasterDetails" Method="InsertOrUpdateStatisticsChartMasterDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ChartId" Parameter="chartId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ColumnId" Parameter="columnId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="SequanceNo" Parameter="sequanceNo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ColumnName" Parameter="columnName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ColumnValue" Parameter="columnValue" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AliasName" Parameter="aliasName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="InsertOrUpdateStatisticsChartMasterDetailsResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllStatisticsChartMasterDetailsByChartId" Method="GetAllStatisticsChartMasterDetailsByChartId">
+    <Parameter Name="ChartId" Parameter="chartId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllStatisticsChartMasterDetailsByChartIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ChartId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ColumnId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ColumnName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AliasName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ColumnValue" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SequanceNo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeleteBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DeleteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TypeColumn" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllStatisticsChartMasterDetails" Method="GetAllStatisticsChartMasterDetails">
+    <ElementType Name="GetAllStatisticsChartMasterDetailsResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ChartId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ColumnId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ColumnName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AliasName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ColumnValue" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SequanceNo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeleteBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DeleteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.StatisticsChartMasterSwap" Method="StatisticsChartMasterSwap">
+    <Parameter Name="cmd" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="currentColMenuLevel" Type="System.Decimal" DbType="Decimal(10,2)" />
+    <Parameter Name="Packageid" Parameter="packageid" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetAllStatisticsChartMaster" Method="GetAllStatisticsChartMaster">
+    <ElementType Name="GetAllStatisticsChartMasterResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ChartName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SequanceNo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ChartType" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="XValueName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="YValueName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="XValueFormate" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeleteBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DeleteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="ExecutiveLeadershipMaster">
+  <DataContextMoniker Name="/ExecutiveLeadershipMasterDataContext" />
+  <nestedChildShapes>
+    <classShape Id="27e2420d-0480-4406-8783-e9146bef67fb" absoluteBounds="2.125, 1.25, 2, 3.6939111328124996">
+      <DataClassMoniker Name="/ExecutiveLeadershipMasterDataContext/ExecutiveLeadershipMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="186f43e4-1e39-4bed-816a-dd5a958dd08e" absoluteBounds="2.1399999999999997, 1.71, 1.9700000000000002, 3.1339111328125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

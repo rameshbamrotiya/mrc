@@ -1,0 +1,647 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Hospital.master.cs" Inherits="Unmehta.WebPortal.Web.Hospital.Hospital" %>
+
+<!doctype html>
+<html lang="en">
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- Favicon -->
+
+    <!-- Favicons -->
+    <link type="image/x-icon" href="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/img/favicon.png")%>" rel="icon" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/css/bootstrap.min.css")%>" />
+    <!-- Fontawesome CSS -->
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/css/magnific-popup.css")%>" />
+    <link rel="stylesheet" href="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/plugins/fontawesome/css/fontawesome.min.css")%>" />
+    <link rel="stylesheet" href="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/plugins/fontawesome/css/all.min.css")%>" />
+    <link rel="stylesheet" href="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/css/modal-video.min.css")%>" />
+    <link rel="stylesheet" href="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/css/owl.carousel.min.css")%>" />
+    <link rel="stylesheet" href="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/css/owl.theme.default.min.css")%>" />
+    <!-- Fancybox CSS -->
+    <link rel="stylesheet" href="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/plugins/fancybox/jquery.fancybox.min.css")%>" />
+    <!-- Select2 CSS -->
+    <link rel="stylesheet" href="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/plugins/select2/css/select2.min.css")%>" />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/css/style.css")%>" />
+    <link rel="stylesheet" href="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/css/custom.css")%>" />
+    <link rel="stylesheet" href="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/css/responsive.css")%>" />
+    <link rel="stylesheet" href="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/css/rs-spacing.css")%>" />
+    <link rel="stylesheet" href="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/css/animate.css")%>" />
+
+
+    <!-- Datepicker -->
+    <!-- Plugin styles -->
+    <link rel="stylesheet" href="<%= ResolveUrl("https://www.unmicrc.org/Admin/Template/html/vendors/bundle.css?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>" type="text/css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.css">
+
+    <!-- rvslider -->
+    <link rel="stylesheet" href="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/revolution/css/layers.css")%>" />
+    <link rel="stylesheet" href="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/revolution/css/navigation.css")%>" />
+    <link rel="stylesheet" href="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/revolution/css/settings.css")%>" />
+    <style>
+
+        .toast-success {
+        background-color: #28a745 !important; /* green for success */
+        color: #ffffff !important;
+    }
+
+    .toast-error {
+        background-color: #dc3545 !important; /* red for error */
+        color: #ffffff !important;
+    }
+
+    .toast-warning {
+        background-color: #ffc107 !important; /* yellow for warning */
+        color: #000000 !important;
+    }
+
+    .toast-info {
+        background-color: #17a2b8 !important; /* blue for info */
+        color: #ffffff !important;
+    }
+        #toast-container > div {
+            opacity: 1 !important;
+            z-index: 9999 !important;
+        }
+
+        .toast-message {
+            color: #ffffff !important;
+        }
+    </style>
+
+    <asp:ContentPlaceHolder ID="TopJS" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="loading" class="icon-preloader">
+        <div class="loader">
+            <div class="animate3">
+                <img src="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/img/loader.gif")%>" alt="Preloader Image animate3">
+            </div>
+        </div>
+    </div>
+    <!-- End Preloader -->
+
+    <form id="form1" runat="server" autocomplete="off">
+        <!-- Main Wrapper -->
+        <div class="main-wrapper" style="background-color: white !important;">
+
+            <!-- Header -->
+            <div id="topheader">
+                <div class="hedaing">
+                    <div class="language">
+                        <%--  <select name="ctl00$ddlLanguageList" onchange="javascript:setTimeout('__doPostBack(\'ctl00$ddlLanguageList\',\'\')', 0)" id="ddlLanguageList" class="form-control">
+	<option selected="selected" value="1">English</option>
+	<option value="2">Hindi</option>
+	<option value="3">Gujarati</option>
+
+</select>--%>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-2 text-center mainlogo">
+                        <a href="/">
+                            <img src="https://www.unmicrc.org/Admin/FilesCMS/AwardImage/3new_logo.png" alt="unmehta">
+                        </a>
+                    </div>
+                    <div class="col-lg-10">
+                        <div class="header-top">
+                            <div class="left-top ">
+                                <ul>
+
+                                    <ul>
+                                        <li>
+                                            <h3 class="animated fadeIn">U. N. Mehta Institute of Cardiology &amp; Research Centre</h3>
+
+                                            <p>(Affiliated to <a href="http://www.bjmcabd.edu.in/" target="_blank">B. J. Medical College</a>, Ahmedabad-380016, INDIA)</p>
+
+                                            <div class="align-items-center d-flex justify-content-center row text-center">
+                                                <div class="col-lg-4">
+                                                    <div class="linenum"><i class="fas fa-phone-alt top-icon_none"></i>(079) 22684200</div>
+                                                </div>
+
+                                                <div class="col-lg-4">
+                                                    <div class="linenum"><i class="fas fa-mobile-alt"></i>+91 9099955274</div>
+                                                </div>
+
+                                                <div class="col-lg-4">
+                                                    <div class="linenum"><i class="fas fa-envelope top-icon_none"></i>info@unmicrc.org</div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li><a href="https://www.nabh.co/" target="_blank">
+                                            <img alt="nabh" src="https://www.unmicrc.org/Admin/FilesCMS/GeneralDocument/logo_(4).png"></a></li>
+                                    </ul>
+
+                                    <!-- <li> <img src="assets/img/heartbit.gif"> </li> -->
+                                    <%--<li>
+                                        <div class="appointmnt_wrapper">
+                                            <div class="emcsbtn">
+                                                <a href="/EMCS">Emergency Cardiac Services
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>--%>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="main_heading_content menu-shrink header-sticky header-main-1">
+                            <div class="row no-gutters">
+                                <div class="col-lg-12">
+                                    <header class="header">
+                                        <nav class="navbar navbar-expand-lg header-nav">
+                                            <div class="container-fluid">
+                                                <%--<div class="navbar-header">
+                                                    <a id="mobile_btn" href="javascript:void(0);">
+                                                        <span class="bar-icon">
+                                                            <span></span>
+                                                            <span></span>
+                                                            <span></span>
+                                                        </span>
+                                                    </a>
+                                                </div>--%>
+                                                <div class="main-menu-wrapper">
+                                                    <%-- <div class="menu-header">
+                                                        <a href="/" class="side-logo">
+                                                            <img src="https://www.unmicrc.org/Admin/FilesCMS/AwardImage/3new_logo.png" class="img-fluid" alt="Logo">
+                                                        </a>
+                                                        <a id="menu_close" class="menu-close" href="javascript:void(0);"><i class="fas fa-times"></i>
+                                                        </a>
+                                                    </div>--%>
+                                                    <ul class="main-nav">
+                                                        <li style="font-size: 25px !important; color: white !important; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif !important;">Book Online Appointment</li>
+                                                    </ul>
+                                                    <%--<span>Book Online Appointment</span>--%>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                    </header>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /Header -->
+
+
+            <div>
+                <asp:ContentPlaceHolder ID="body" runat="server">
+                </asp:ContentPlaceHolder>
+
+                <!-- book now-->
+
+                <!-- end book now Section -->
+
+                <!-- Footer -->
+                <footer class="footer">
+                    <%--<%=strFooter %>--%>
+                    <div class="footer-top">
+                        <div class="container">
+                            <div class="row justify-content-between">
+                                <div class="col-md-6 col-lg-3 col-xl-3">
+
+                                    <div class="footer-widget footer-about">
+                                        <div class="footer-logo md-text-center">
+                                            <a href="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/img/logo.gif")%>">
+                                                <img src="<%= strFooterLogo%>" alt="footerlog"></a>
+                                        </div>
+                                        <%=strFooter %>
+                                        <%--
+							<div class="footer-widget footer-contact">
+								<h2 class="footer-title">U N Mehta Institute of Cardiology & Research Centre</h2>
+								<div class="footer-contact-info">
+									<div class="footer-address">
+										<span><i class="fas fa-map-marker-alt"></i></span>
+										<p>
+											Civil Hospital, Asarwa Ahmedabad-380016
+										</p>
+									</div>
+									<p>
+										<i class="fas fa-phone-alt"></i>
+										(079) 22684200
+									</p>
+									<p>
+										<i class="fas fa-mobile-alt"></i>+91 9099 108 108
+									</p>
+								</div>
+							</div>
+                                        --%>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-auto col-xl-auto">
+                                    <div class="footer-widget footer-menu">
+                                        <h2 class="footer-title">Quick Links</h2>
+                                        <ul>
+                                            <%=strQuickLink %>
+                                            <%--<li><a href="aboutus.html">About Us</a></li>
+								<li><a href="our_services.html">Our Excellence</a>
+								</li>
+								<li><a href="scheme_list.html">Schemes</a>
+								</li>
+								<li><a href="#">Statistics</a>
+								</li>
+								<li><a href="#">Virtual Tour</a>
+								</li>
+								<li><a href="#">Career</a>
+								</li>
+								<li><a href="#">Contact Us</a>
+								</li>--%>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 col-xl-auto">
+                                    <div class="footer-widget footer-menu">
+                                        <h2 class="footer-title">Site Info</h2>
+                                        <ul>
+
+                                            <%=strSiteInfo %>
+                                            <%--  <li><a href="#">Sitemap</a>
+								</li>
+								<li><a href="#">Privacy Policy</a>
+								</li>
+								<li><a href="#">Conditions of Use</a>
+								</li>
+								<li><a href="#">Important Public Notices</a>
+								</li>
+								<li><a href="https://gujhealth.gujarat.gov.in/" target="_blank">Health and Family Welfare
+								Department</a>
+								</li>--%>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 col-lg-3 col-xl-3">
+                                    <div class="footer-widget">
+                                        <h2 class="footer-title">Accreditations</h2>
+                                        <div class="copyright-menu">
+                                            <ul class="footer-social1">
+                                                <%=strAccredation %>
+                                                <%-- <li><a href="https://www.nabh.co/" target="_blank">
+										<img src="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/img/footer_nabh.png")%>" class="img-fluid" alt="Logo">
+									</a>
+									</li>--%>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /Footer Top -->
+                    <section class="footer-center-wrap">
+                        <div class="container">
+                            <div class="row no-gutters">
+                                <div class="col-lg-4 col-12">
+                                    <div class="footer-social">
+                                        <ul>
+                                            <li>Follow Us:</li>
+                                            <li>
+                                                <a href="https://www.facebook.com/U-N-Mehta-Institute-of-Cardiology-Research-Centre-554598138066060/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://twitter.com/UNMEHTAHOSPITA1" target="_blank"><i class="fab fa-twitter"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.youtube.com/channel/UCbQmaKEVkSMhXboUkGM4c5w?view_as=subscriber" target="_blank"><i class="fab fa-youtube"></i></a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.instagram.com/unmicrc/" target="_blank"><i class="fab fa-instagram"></i></a>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="col-lg-8 col-12">
+                                    <div class="row">
+                                        <%--<div class="col-md-6 col-12">
+								<div class="newsletter-title">
+									<h4 class="item-title">Stay informed and healthy
+									</h4>
+								</div>
+							</div>--%>
+                                        <div class="col-md-12 col-12">
+                                            <div class="newsletter-form">
+                                                <div class="input-group stylish-input-group" style="display: none;">
+                                                    <input type="text" class="form-control" placeholder="Enter your e-mail" name="email" id="txtNewsletterEmail" runat="server" style="color: black" />
+                                                    <asp:RequiredFieldValidator ID="rfNewsletterEmail" runat="server" ErrorMessage="*" ValidationGroup="GRp" ControlToValidate="txtNewsletterEmail" Display="Dynamic"></asp:RequiredFieldValidator>
+                                                    <asp:RegularExpressionValidator ID="revEmail" runat="server" ControlToValidate="txtNewsletterEmail"
+                                                        CssClass="validationmsg" SetFocusOnError="true" ValidationExpression="^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                                                        Display="Dynamic" ErrorMessage="Invalid email address" ValidationGroup="GRp" />
+                                                    <span class="input-group-addon">
+                                                        <button type="submit" id="btnNewsLetter" runat="server" validationgroup="GRp" onserverclick="btnNewsLetter_ServerClick">
+                                                            <span aria-hidden="true">Subscribe ..!</span>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                                <div class="get-started text-start text-lg-end link-btn">
+                                                    <a href="#" class="btn btn-dark text-3 font-weight-semibold nextBtn" type="button" data-toggle="modal" data-target="#SubscribeNewsletter" data-whatever="@mdo" data-original-title="" title="">Subscribe Newsletter</a>
+                                                </div>
+                                            </div>
+                                            <div class="newsletter-form">
+                                                <asp:Label ID="lblError" runat="server" Text=""></asp:Label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <div class="footer-bottom">
+                        <div class="container">
+                            <div class="copyright">
+                                <div class="row">
+                                    <div class="col-md-4 col-lg-4">
+                                        <div class="copyright-menu">
+                                            <div class="md-text-left">
+                                                <p>Total Visitor : <%=lgWebSitecount %></p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 col-lg-4">
+                                        <div class="copyright-menu">
+                                            <div class="text-center md-text-left">
+                                                <p>© <%=DateTime.Now.Year %> All Rights Reserved.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4 text-right md-text-left">
+                                        <div class="copyright-menu">
+                                            <div class="md-text-left">
+                                                <p>
+                                                    Design & Developed By : <a href="https://gil.gujarat.gov.in/">Gujarat informatics Limited</a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- /Footer -->
+            <!-- Go Top -->
+            <div class="go-top">
+                <i class="fas fa-angle-double-up"></i>
+                <i class="fas fa-angle-double-up"></i>
+            </div>
+            <!-- End Go Top -->
+        </div>
+
+        <div class="modal fade" id="exampleModalfat" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel2">Write to Feedback Here</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close" data-original-title=""
+                            title="">
+                            <span aria-hidden="true">×</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row form-row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <asp:TextBox ID="txtFullName" runat="server" CssClass="form-control" placeholder="Full Name" ValidationGroup="Feed" onkeypress="return lettersWithSpaceOnly(event)"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvFullName" runat="server" ErrorMessage="Enter Full Name" ValidationGroup="Feed" ForeColor="Red" ControlToValidate="txtFullName"></asp:RequiredFieldValidator>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <asp:TextBox ID="txtEmail" runat="server" CssClass="form-control" placeholder="Email"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvEmail" runat="server" ErrorMessage="Enter Email Address" ForeColor="Red" ControlToValidate="txtEmail" ValidationGroup="Feed"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ControlToValidate="txtEmail" ForeColor="Red" ValidationGroup="Feed"
+                                        CssClass="validationmsg" SetFocusOnError="true" ValidationExpression="^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                                        Display="Dynamic" ErrorMessage="Invalid Email." />
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <asp:TextBox ID="txtMobileNo" runat="server" CssClass="form-control" MaxLength="15" placeholder="Mobile Number" onkeypress="return isNumberKey(event)" ValidationGroup="Feed"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvMobileNo" runat="server" ErrorMessage="Enter Mobile Number" ForeColor="Red" ControlToValidate="txtMobileNo" ValidationGroup="Feed"></asp:RequiredFieldValidator>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <asp:TextBox ID="txtCoutry" runat="server" CssClass="form-control" placeholder="Country" onkeypress="return lettersWithSpaceOnly(event)" ValidationGroup="Feed"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvCoutry" runat="server" ErrorMessage="Enter Country" ForeColor="Red" ControlToValidate="txtCoutry" ValidationGroup="Feed"></asp:RequiredFieldValidator>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <asp:TextBox ID="txtState" runat="server" CssClass="form-control" placeholder="State" onkeypress="return lettersWithSpaceOnly(event)" ValidationGroup="Feed"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvState" runat="server" ErrorMessage="Enter State" ForeColor="Red" ControlToValidate="txtState" ValidationGroup="Feed"></asp:RequiredFieldValidator>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <asp:TextBox ID="txtCity" runat="server" CssClass="form-control" placeholder="City" onkeypress="return lettersWithSpaceOnly(event)" ValidationGroup="Feed"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvCity" runat="server" ErrorMessage="Enter City" ForeColor="Red" ControlToValidate="txtCity" ValidationGroup="Feed"></asp:RequiredFieldValidator>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <asp:TextBox ID="txtFeedBack" runat="server" CssClass="form-control" TextMode="MultiLine" Rows="5" placeholder="Feedback" ValidationGroup="Feed"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvFeedBack" runat="server" ErrorMessage="Enter Feedback" ForeColor="Red" ControlToValidate="txtFeedBack" ValidationGroup="Feed"></asp:RequiredFieldValidator>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group text-center">
+                                    <asp:Label ID="lblMessage" runat="server" Visible="false" Font-Bold="true"></asp:Label>
+                                </div>
+                                <div class="form-group text-center">
+                                    <asp:Button ID="btnFeedbackSubmit" runat="server" CssClass="btn btn-primary nextBtn btn-lg" Text="Submit" OnClick="btnFeedbackSubmit_Click" ValidationGroup="Feed" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="SubscribeNewsletter" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="SubscribeNewsletterTitle">Subscribe Newsletter</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close" data-original-title=""
+                            title="">
+                            <span aria-hidden="true">×</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row form-row">
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <asp:TextBox ID="txtSNFullName" runat="server" CssClass="form-control" placeholder="Full Name" ValidationGroup="Newsletter" onkeypress="return lettersWithSpaceOnly(event)"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvSNFullName" runat="server" ErrorMessage="Enter Full Name" ValidationGroup="Newsletter" ForeColor="Red" ControlToValidate="txtSNFullName"></asp:RequiredFieldValidator>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <asp:TextBox ID="txtSNEmailId" runat="server" CssClass="form-control" placeholder="Email" ValidationGroup="Newsletter" CausesValidation="true"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvSNEmailId" runat="server" ErrorMessage="Enter Email Address" ForeColor="Red" ControlToValidate="txtSNEmailId" ValidationGroup="Newsletter"></asp:RequiredFieldValidator>
+                                    <asp:RegularExpressionValidator ID="revSNEmailId" runat="server" ControlToValidate="txtSNEmailId" ForeColor="Red" ValidationGroup="Newsletter"
+                                        CssClass="validationmsg" SetFocusOnError="true" ValidationExpression="^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$"
+                                        Display="Dynamic" ErrorMessage="Invalid Email." />
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <asp:TextBox ID="txtSNMobileNumber" runat="server" CssClass="form-control" MaxLength="15" placeholder="Mobile Number" onkeypress="return isNumberKey(event)" ValidationGroup="Newsletter"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvSNMobileNumber" runat="server" ErrorMessage="Enter Mobile Number" ForeColor="Red" ControlToValidate="txtSNMobileNumber" ValidationGroup="Newsletter"></asp:RequiredFieldValidator>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group">
+                                    <asp:TextBox ID="txtSNlocation" runat="server" CssClass="form-control" placeholder="Location" ValidationGroup="Newsletter"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvSNlocation" runat="server" ErrorMessage="Enter location" ForeColor="Red" ControlToValidate="txtSNlocation" ValidationGroup="Newsletter"></asp:RequiredFieldValidator>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <asp:Image ID="imgCaptcha" runat="server" Style="float: left" />
+                                    <button runat="server" id="btnRun" class="btn btn-mini" causesvalidation="false" onserverclick="btnRun_ServerClick" style="float: left" title="Search">
+                                        <i class="fas fa-sync-alt"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <asp:TextBox ID="txtCaptcha" runat="server" autocomplete="off" class="form-control" placeholder="Captcha" ValidationGroup="Newsletter"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="rfvCaptcha" runat="server" ErrorMessage="Enter Captcha" Display="Dynamic" ForeColor="Red" ControlToValidate="txtCaptcha" ValidationGroup="Newsletter"></asp:RequiredFieldValidator>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <div class="form-group text-center">
+                                    <asp:Label ID="Label1" runat="server" Visible="false" Font-Bold="true"></asp:Label>
+                                    <asp:Label ID="lblWarningMessage" ForeColor="Red" runat="server" Visible="false" Font-Bold="true"></asp:Label>
+                                </div>
+                                <div class="form-group text-center">
+                                    <asp:Button ID="btnSubscribeNewsletterSubmit" runat="server" CssClass="btn btn-primary nextBtn btn-lg" Text="Submit" OnClick="btnSubscribeNewsletterSubmit_Click" ValidationGroup="Newsletter" />
+                                    <br />
+                                    <asp:Label ID="lblCapatchMessage" runat="server" Visible="false" ForeColor="Red" Font-Bold="true"></asp:Label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="AlertSubscribeNewsletter" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close" data-original-title=""
+                            title="">
+                            <span aria-hidden="true">×</span></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="card success-card">
+                            <div class="card-body">
+                                <div class="success-cont">
+                                    <i class="fas fa-check"></i>
+                                    <h3 id="lblMessageBox" runat="server">Subscribe newsletter added successfully.!</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /Main Wrapper -->
+        <%-- <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+<div class="modal-content">
+	<div class="modal-header">
+		<button class="close" type="button" data-dismiss="modal" aria-label="Close" data-original-title=""
+			title="">
+			<span aria-hidden="true">×</span></button>
+	</div>
+	<div class="modal-body">
+		<img src="<%= ResolveUrl("https://www.unmicrc.org/assets/img/blog/blog-01.JPG")%>" alt="" style="width: 100%;">
+	</div>
+
+</div>
+		</div>
+	</div>--%>
+        <!-- /Main Wrapper -->
+        <!-- jQuery -->
+
+
+        <script src="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/js/jquery.min.js")%>"></script>
+        <script src="<%= ResolveUrl("https://www.unmicrc.org/Admin/Template/html/vendors/bundle.js?"+DateTime.Now.ToString("ddMMyyyyhhmmss"))%>"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    
+        <%--<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>--%>
+        <%--<script src="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/js/google-lang-translate.js")%>"></script>--%>
+
+        <!-- Bootstrap Core JS -->
+        <script src="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/js/popper.min.js")%>"></script>
+        <script src="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/js/bootstrap.min.js")%>"></script>
+        <script src="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/js/wow.js")%>"></script>
+        <script src="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/js/owl.carousel.min.js")%>"></script>
+        <!-- Slick JS -->
+        <script src="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/js/jquery-modal-video.min.js")%>"></script>
+        <script src="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/js/slick.js")%>"></script>
+        <!-- Custom JS -->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+        <!-- Fancybox JS -->
+        <script src="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/plugins/fancybox/jquery.fancybox.min.js")%>"></script>
+        <!-- Select2 JS -->
+        <script src="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/plugins/select2/js/select2.min.js")%>"></script>
+        <!-- revolution slider js -->
+        <script src="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/revolution/js/jquery.themepunch.tools.min.js")%>"></script>
+        <script src="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/revolution/js/jquery.themepunch.revolution.min.js")%>"></script>
+        <script src="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/revolution/js/extensions/revolution.extension.actions.min.js")%>"></script>
+        <script src="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/revolution/js/extensions/revolution.extension.carousel.min.js")%>"></script>
+        <script src="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/revolution/js/extensions/revolution.extension.kenburn.min.js")%>"></script>
+        <script src="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/revolution/js/extensions/revolution.extension.layeranimation.min.js")%>"></script>
+        <script src="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/revolution/js/extensions/revolution.extension.migration.min.js")%>"></script>
+        <script src="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/revolution/js/extensions/revolution.extension.navigation.min.js")%>"></script>
+        <script src="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/revolution/js/extensions/revolution.extension.parallax.min.js")%>"></script>
+        <script src="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/revolution/js/extensions/revolution.extension.slideanims.min.js")%>"></script>
+        <script src="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/revolution/js/extensions/revolution.extension.video.min.js")%>"></script>
+
+        <script src="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/js/script.min.js")%>"></script>
+        <script src="<%= ResolveUrl("https://www.unmicrc.org/Hospital/assets/js/custom.js")%>"></script>
+
+        <script src="<%=ResolveUrl("https://www.unmicrc.org/Scripts/canvasjs.min.js") %>"></script>
+        <script>
+
+            function TosterMessage(message, strType) {
+                toastr.options = {
+                    timeOut: 4e3,
+                    progressBar: !0,
+                    showMethod: "slideDown",
+                    hideMethod: "slideUp",
+                    showDuration: 500,
+                    hideDuration: 200,
+                    positionClass: "toast-top-center"
+                };
+
+                switch (strType) {
+                    case "success": toastr.success(message); break;
+                    case "error": toastr.error(message); break;
+                    case "warning": toastr.warning(message); break;
+                    case "info": toastr.info(message); break;
+                }
+            }
+
+        </script>
+        <asp:ContentPlaceHolder ID="BottomJs" runat="server">
+        </asp:ContentPlaceHolder>
+
+    </form>
+</body>
+</html>

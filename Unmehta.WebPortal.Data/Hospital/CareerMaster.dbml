@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="CareerMasterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.21,1433;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GetCareerMasterById" Method="GetCareerMasterById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetCareerMasterByIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="DepartmentId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DepartmentName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="DesignationId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DesignationName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ShortDescription" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TotalVacancy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RequirementType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FileName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FilePath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllCareerMaster" Method="GetAllCareerMaster">
+    <Parameter Name="lanId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllCareerMasterResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="DesignationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DesignationName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="DepartmentId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="DepartmentName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="ShortDescription" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TotalVacancy" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="RequirementType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="FileName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FilePath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateCareerMaster" Method="InsertOrUpdateCareerMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="DepartmentId" Parameter="departmentId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DesignationId" Parameter="designationId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="ShortDescription" Parameter="shortDescription" Type="System.String" DbType="NVarChar(300)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="TotalVacancy" Parameter="totalVacancy" Type="System.Int32" DbType="Int" />
+    <Parameter Name="RequirementType" Parameter="requirementType" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="FileName" Parameter="fileName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="FilePath" Parameter="filePath" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsVisible" Parameter="isVisible" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(500)" />
+    <ElementType Name="InsertOrUpdateCareerMasterResult">
+      <Column Name="RecId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.RemoveCareerMaster" Method="RemoveCareerMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="VarChar(500)" />
+    <ElementType Name="RemoveCareerMasterResult">
+      <Column Name="RecId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

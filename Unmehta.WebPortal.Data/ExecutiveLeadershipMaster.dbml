@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="ExecutiveLeadershipMasterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.21,1433;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.ExecutiveLeadershipMaster" Member="ExecutiveLeadershipMasters">
+    <Type Name="ExecutiveLeadershipMaster">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="LanguageId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="DesignationId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PhotoName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PhotoPath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeleteBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DeleteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.RemoveExecutiveLeadershipMaster" Method="RemoveExecutiveLeadershipMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="VarChar(500)" />
+    <ElementType Name="RemoveExecutiveLeadershipMasterResult">
+      <Column Name="RecId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllExecutiveLeadershipMaster" Method="GetAllExecutiveLeadershipMaster">
+    <ElementType Name="GetAllExecutiveLeadershipMasterResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="DesignationId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DesignationName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PhotoName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PhotoPath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetExecutiveLeadershipMasterById" Method="GetExecutiveLeadershipMasterById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetExecutiveLeadershipMasterByIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="DesignationId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DesignationName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="PhotoName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PhotoPath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateExecutiveLeadershipMaster" Method="InsertOrUpdateExecutiveLeadershipMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="VarChar(200)" />
+    <Parameter Name="DesignationId" Parameter="designationId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="PhotoName" Parameter="photoName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="PhotoPath" Parameter="photoPath" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Message" Parameter="message" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsVisible" Parameter="isVisible" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(500)" />
+    <ElementType Name="InsertOrUpdateExecutiveLeadershipMasterResult">
+      <Column Name="RecId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

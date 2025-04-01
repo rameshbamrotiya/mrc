@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="NewsLetterMasterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.21,1433;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString1" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.RemoveNewsLetterMaster" Method="RemoveNewsLetterMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateNewsLetterSubScription" Method="UpdateNewsLetterSubScription">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="NewsLetterSubscription" Parameter="newsLetterSubscription" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetAllNewsLetterSubScription" Method="GetAllNewsLetterSubScription">
+    <ElementType Name="GetAllNewsLetterSubScriptionResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="NewsLetterEmail" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="NewsLetterSubscription" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="LastUpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateNewsLetterMaster" Method="InsertOrUpdateNewsLetterMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="NewsLetterEmail" Parameter="newsLetterEmail" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="NewsLetterSubscription" Parameter="newsLetterSubscription" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="InsertOrUpdateNewsLetterMasterResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

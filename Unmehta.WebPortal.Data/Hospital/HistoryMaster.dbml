@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="HistoryMasterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.2;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GetHistoryMasterById" Method="GetHistoryMasterById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetHistoryMasterByIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageName" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Year" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="HistoryTitle" Type="System.String" DbType="VarChar(200)" CanBeNull="true" />
+      <Column Name="HistoryDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="HistoryPhotoName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="HistoryPhotoPath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.RemoveHistoryMaster" Method="RemoveHistoryMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="VarChar(500)" />
+    <ElementType Name="RemoveHistoryMasterResult">
+      <Column Name="RecId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllHistoryMaster" Method="GetAllHistoryMaster">
+    <Parameter Name="LangId" Parameter="langId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllHistoryMasterResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Year" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="HistoryTitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="HistoryDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MetaTitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MetaDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="HistoryImage" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateHistoryMaster" Method="InsertOrUpdateHistoryMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="MetaTitle" Parameter="metaTitle" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="MetaDescription" Parameter="metaDescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Year" Parameter="year" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="HistoryTitle" Parameter="historyTitle" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="HistoryDescription" Parameter="historyDescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="HistoryImage" Parameter="historyImage" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsVisible" Parameter="isVisible" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(500)" />
+    <ElementType Name="InsertOrUpdateHistoryMasterResult">
+      <Column Name="RecId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

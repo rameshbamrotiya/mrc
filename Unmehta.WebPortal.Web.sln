@@ -1,0 +1,85 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33712.159
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unmehta.WebPortal.Web", "Unmehta.WebPortal.Web\Unmehta.WebPortal.Web.csproj", "{C9BF40F1-B42E-4FDA-B862-E35824C48622}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unmehta.WebPortal.Data", "Unmehta.WebPortal.Data\Unmehta.WebPortal.Data.csproj", "{2556B19B-4292-4E71-A7B0-833B60EFC079}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unmehta.WebPortal.Repository", "Unmehta.WebPortal.Repository\Unmehta.WebPortal.Repository.csproj", "{D869D0FD-A876-47EE-A743-B51C892CFF10}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unmehta.WebPortal.Common", "Unmehta.WebPortal.Common\Unmehta.WebPortal.Common.csproj", "{DAB0CD41-B76D-4848-BF59-7A9E3FE7A5B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unmehta.WebPortal.Model", "Unmehta.WebPortal.Model\Unmehta.WebPortal.Model.csproj", "{9C2D9D14-EC02-4C47-A4B4-1E33CF75D509}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BAL", "BAL\BAL.csproj", "{4C4A1C7F-C64F-40DF-9B32-7CDCEF4216D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{C1EDF218-BE27-417D-9FFD-6AC5151F9C08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BO", "BO\BO.csproj", "{CA8AAF8F-1DFD-410A-AFD0-91680CF9174F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnMehta.WebPortal.EmailScheduler", "UnMehta.WebPortal.EmailScheduler\UnMehta.WebPortal.EmailScheduler.csproj", "{F56BF413-E84F-4E47-AF31-E9BE7C176946}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnMehta.Admission.PaymentScheduler", "UnMehta.Admission.PaymentScheduler\UnMehta.Admission.PaymentScheduler.csproj", "{740201A2-A5D9-4BCE-A68E-17E92D3FF15D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UNnMehta.Appointment.SMSReminder", "UNnMehta.Appointment.SMSReminder\UNnMehta.Appointment.SMSReminder.csproj", "{6E0255C1-A327-4615-BE87-952646251223}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C9BF40F1-B42E-4FDA-B862-E35824C48622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9BF40F1-B42E-4FDA-B862-E35824C48622}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9BF40F1-B42E-4FDA-B862-E35824C48622}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9BF40F1-B42E-4FDA-B862-E35824C48622}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2556B19B-4292-4E71-A7B0-833B60EFC079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2556B19B-4292-4E71-A7B0-833B60EFC079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2556B19B-4292-4E71-A7B0-833B60EFC079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2556B19B-4292-4E71-A7B0-833B60EFC079}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D869D0FD-A876-47EE-A743-B51C892CFF10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D869D0FD-A876-47EE-A743-B51C892CFF10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D869D0FD-A876-47EE-A743-B51C892CFF10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D869D0FD-A876-47EE-A743-B51C892CFF10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAB0CD41-B76D-4848-BF59-7A9E3FE7A5B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAB0CD41-B76D-4848-BF59-7A9E3FE7A5B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAB0CD41-B76D-4848-BF59-7A9E3FE7A5B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAB0CD41-B76D-4848-BF59-7A9E3FE7A5B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C2D9D14-EC02-4C47-A4B4-1E33CF75D509}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C2D9D14-EC02-4C47-A4B4-1E33CF75D509}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C2D9D14-EC02-4C47-A4B4-1E33CF75D509}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C2D9D14-EC02-4C47-A4B4-1E33CF75D509}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C4A1C7F-C64F-40DF-9B32-7CDCEF4216D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C4A1C7F-C64F-40DF-9B32-7CDCEF4216D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C4A1C7F-C64F-40DF-9B32-7CDCEF4216D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C4A1C7F-C64F-40DF-9B32-7CDCEF4216D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1EDF218-BE27-417D-9FFD-6AC5151F9C08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1EDF218-BE27-417D-9FFD-6AC5151F9C08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1EDF218-BE27-417D-9FFD-6AC5151F9C08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1EDF218-BE27-417D-9FFD-6AC5151F9C08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA8AAF8F-1DFD-410A-AFD0-91680CF9174F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA8AAF8F-1DFD-410A-AFD0-91680CF9174F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA8AAF8F-1DFD-410A-AFD0-91680CF9174F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA8AAF8F-1DFD-410A-AFD0-91680CF9174F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F56BF413-E84F-4E47-AF31-E9BE7C176946}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F56BF413-E84F-4E47-AF31-E9BE7C176946}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F56BF413-E84F-4E47-AF31-E9BE7C176946}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F56BF413-E84F-4E47-AF31-E9BE7C176946}.Release|Any CPU.Build.0 = Release|Any CPU
+		{740201A2-A5D9-4BCE-A68E-17E92D3FF15D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{740201A2-A5D9-4BCE-A68E-17E92D3FF15D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{740201A2-A5D9-4BCE-A68E-17E92D3FF15D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{740201A2-A5D9-4BCE-A68E-17E92D3FF15D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E0255C1-A327-4615-BE87-952646251223}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E0255C1-A327-4615-BE87-952646251223}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E0255C1-A327-4615-BE87-952646251223}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E0255C1-A327-4615-BE87-952646251223}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {787C4BAE-1CD0-4593-AE55-6F0AD5310297}
+	EndGlobalSection
+EndGlobal

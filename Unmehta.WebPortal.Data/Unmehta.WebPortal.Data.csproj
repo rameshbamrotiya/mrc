@@ -1,0 +1,906 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2556B19B-4292-4E71-A7B0-833B60EFC079}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Unmehta.WebPortal.Data</RootNamespace>
+    <AssemblyName>Unmehta.WebPortal.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Appointment\AppointmentDoctor.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AppointmentDoctor.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="CandidateDetails.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CandidateDetails.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="CMS.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CMS.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ConfigDetails.designer.cs">
+      <DependentUpon>ConfigDetails.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Common\GlobalSearchMaster.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>GlobalSearchMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\HeaderFooterMaster.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HeaderFooterMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\HomePage.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HomePage.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\MenuMaster.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MenuMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\NewsLetterMaster.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>NewsLetterMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\PackageMaster.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PackageMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\PaymentGateway.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PaymentGateway.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Common\UserLogin.designer.cs">
+      <DependentUpon>UserLogin.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="ExecutiveLeadershipMaster.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ExecutiveLeadershipMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Faculty.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Faculty.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\AboutNursingCareMaster.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AboutNursingCareMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\AboutUsMaster.designer.cs">
+      <DependentUpon>AboutUsMaster.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Hospital\AcademicMedical.designer.cs">
+      <DependentUpon>AcademicMedical.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Hospital\AffilationMaster.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AffilationMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\BannerSubDetails.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BannerSubDetails.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\BlogCategoryMaster.designer.cs">
+      <DependentUpon>BlogCategoryMaster.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Hospital\CandidateBasicDetails.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CandidateBasicDetails.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\CareerMaster.designer.cs">
+      <DependentUpon>CareerMaster.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Hospital\ComplaintEnquiryMaster.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ComplaintEnquiryMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\ContributionTransactionMaster.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContributionTransactionMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\DailyEntryVisitMaster.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DailyEntryVisitMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\DepartmentTab.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DepartmentTab.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\DoctorMasterWithDetails.designer.cs">
+      <DependentUpon>DoctorMasterWithDetails.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Hospital\EquipmentMaster.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EquipmentMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\EventFormField.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>EventFormField.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\FacilitesMaster.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FacilitesMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\FooterQuickLink.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FooterQuickLink.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\FrontAppointment.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FrontAppointment.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\GoverningBoardMaster.designer.cs">
+      <DependentUpon>GoverningBoardMaster.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Hospital\HistoryMaster.designer.cs">
+      <DependentUpon>HistoryMaster.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Hospital\HospitalAppointment.designer.cs">
+      <DependentUpon>HospitalAppointment.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Hospital\ICUOnWheelMaster.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ICUOnWheelMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\OpdUnit.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OpdUnit.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\OtherFacilitiesMaster.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OtherFacilitiesMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\OtpMobileMaster.designer.cs">
+      <DependentUpon>OtpMobileMaster.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Hospital\OurExcellenceMaster.designer.cs">
+      <DependentUpon>OurExcellenceMaster.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Hospital\OurExcellenceMasterFacilityDetails.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OurExcellenceMasterFacilityDetails.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\OurExcellenceMasterFacultyDetails.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OurExcellenceMasterFacultyDetails.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\OurExcellenceMasterStatisticsDetails.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>OurExcellenceMasterStatisticsDetails.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\PackageType.cs">
+      <DependentUpon>PackageType.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\PackageType.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PackageType.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\PatientFeedback.designer.cs">
+      <DependentUpon>PatientFeedback.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Hospital\PatientsEducationBrochure.designer.cs">
+      <DependentUpon>PatientsEducationBrochure.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Hospital\PatientTestimonialMaster.designer.cs">
+      <DependentUpon>PatientTestimonialMaster.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Hospital\ScheduleNewsLetterMaster.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ScheduleNewsLetterMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\SpecializationMaster.cs">
+      <DependentUpon>SpecializationMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\SpecializationMaster.designer.cs">
+      <DependentUpon>SpecializationMaster.dbml</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Hospital\StarOfMaster.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StarOfMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\StatisticsChartMaster.designer.cs">
+      <DependentUpon>StatisticsChartMaster.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Hospital\StentPriceMaster.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>StentPriceMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\UnitMaster.designer.cs">
+      <DependentUpon>UnitMaster.dbml</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Hospital\UnmicrCareer.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UnmicrCareer.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Hospital\VisionMissionMaster.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VisionMissionMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Recruitment\RecruitmentAdvertisementCodeMaster.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RecruitmentAdvertisementCodeMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Recruitment\RecruitmentAdvertisementSourceMasterDetails.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RecruitmentAdvertisementSourceMasterDetails.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Recruitment\RecruitmentEducationTypeMaster.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RecruitmentEducationTypeMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Recruitment\Recruitments.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Recruitments.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Rights\AdminMenuLink.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdminMenuLink.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Rights\ChatBoxMaster.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ChatBoxMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Rights\RoleMaster.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RoleMaster.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Rights\UserMaster.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UserMaster.dbml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Appointment\AppointmentDoctor.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>AppointmentDoctor.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Appointment\AppointmentDoctor.dbml.layout">
+      <DependentUpon>AppointmentDoctor.dbml</DependentUpon>
+    </None>
+    <None Include="CandidateDetails.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>CandidateDetails.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CMS.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>CMS.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Common\ConfigDetails.dbml">
+      <SubType>Designer</SubType>
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ConfigDetails.designer.cs</LastGenOutput>
+    </None>
+    <None Include="Common\ConfigDetails.dbml.layout">
+      <DependentUpon>ConfigDetails.dbml</DependentUpon>
+    </None>
+    <None Include="Common\GlobalSearchMaster.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>GlobalSearchMaster.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Common\HeaderFooterMaster.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>HeaderFooterMaster.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Common\HomePage.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>HomePage.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Common\MenuMaster.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>MenuMaster.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Common\NewsLetterMaster.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>NewsLetterMaster.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Common\PackageMaster.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>PackageMaster.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Common\PaymentGateway.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>PaymentGateway.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Common\UserLogin.dbml">
+      <SubType>Designer</SubType>
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>UserLogin.designer.cs</LastGenOutput>
+    </None>
+    <None Include="ExecutiveLeadershipMaster.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ExecutiveLeadershipMaster.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Faculty.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Faculty.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital\AboutNursingCareMaster.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>AboutNursingCareMaster.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital\AboutUsMaster.dbml">
+      <SubType>Designer</SubType>
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>AboutUsMaster.designer.cs</LastGenOutput>
+    </None>
+    <None Include="Hospital\AboutUsMaster.dbml.layout">
+      <DependentUpon>AboutUsMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\AcademicMedical.dbml">
+      <SubType>Designer</SubType>
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>AcademicMedical.designer.cs</LastGenOutput>
+    </None>
+    <None Include="Hospital\AcademicMedical.dbml.layout">
+      <DependentUpon>AcademicMedical.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\AffilationMaster.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>AffilationMaster.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital\BannerSubDetails.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>BannerSubDetails.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital\BlogCategoryMaster.dbml">
+      <SubType>Designer</SubType>
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>BlogCategoryMaster.designer.cs</LastGenOutput>
+    </None>
+    <None Include="Hospital\BlogCategoryMaster.dbml.layout">
+      <DependentUpon>BlogCategoryMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\CandidateBasicDetails.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>CandidateBasicDetails.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital\CareerMaster.dbml">
+      <SubType>Designer</SubType>
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>CareerMaster.designer.cs</LastGenOutput>
+    </None>
+    <None Include="Hospital\CareerMaster.dbml.layout">
+      <DependentUpon>CareerMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\ComplaintEnquiryMaster.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ComplaintEnquiryMaster.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital\ContributionTransactionMaster.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ContributionTransactionMaster.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital\DailyEntryVisitMaster.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DailyEntryVisitMaster.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital\DepartmentTab.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DepartmentTab.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital\DoctorMasterWithDetails.dbml">
+      <SubType>Designer</SubType>
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>DoctorMasterWithDetails.designer.cs</LastGenOutput>
+    </None>
+    <None Include="Hospital\DoctorMasterWithDetails.dbml.layout">
+      <DependentUpon>DoctorMasterWithDetails.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\EquipmentMaster.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>EquipmentMaster.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital\EventFormField.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>EventFormField.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital\FacilitesMaster.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>FacilitesMaster.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital\FooterQuickLink.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>FooterQuickLink.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital\FrontAppointment.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>FrontAppointment.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital\FrontAppointment.dbml.layout">
+      <DependentUpon>FrontAppointment.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\GoverningBoardMaster.dbml">
+      <SubType>Designer</SubType>
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>GoverningBoardMaster.designer.cs</LastGenOutput>
+    </None>
+    <None Include="Hospital\GoverningBoardMaster.dbml.layout">
+      <DependentUpon>GoverningBoardMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\HistoryMaster.dbml">
+      <SubType>Designer</SubType>
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>HistoryMaster.designer.cs</LastGenOutput>
+    </None>
+    <None Include="Hospital\HistoryMaster.dbml.layout">
+      <DependentUpon>HistoryMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\HospitalAppointment.dbml">
+      <SubType>Designer</SubType>
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>HospitalAppointment.designer.cs</LastGenOutput>
+    </None>
+    <None Include="Hospital\HospitalAppointment.dbml.layout">
+      <DependentUpon>HospitalAppointment.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\ICUOnWheelMaster.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ICUOnWheelMaster.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital\OpdUnit.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>OpdUnit.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital\OtherFacilitiesMaster.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>OtherFacilitiesMaster.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital\OtpMobileMaster.dbml">
+      <SubType>Designer</SubType>
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>OtpMobileMaster.designer.cs</LastGenOutput>
+    </None>
+    <None Include="Hospital\OtpMobileMaster.dbml.layout">
+      <DependentUpon>OtpMobileMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\OurExcellenceMaster.dbml">
+      <SubType>Designer</SubType>
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>OurExcellenceMaster.designer.cs</LastGenOutput>
+    </None>
+    <None Include="Hospital\OurExcellenceMaster.dbml.layout">
+      <DependentUpon>OurExcellenceMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\OurExcellenceMasterFacilityDetails.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>OurExcellenceMasterFacilityDetails.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital\OurExcellenceMasterFacultyDetails.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>OurExcellenceMasterFacultyDetails.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital\OurExcellenceMasterStatisticsDetails.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>OurExcellenceMasterStatisticsDetails.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital\PackageType.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>PackageType.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital\PatientFeedback.dbml">
+      <SubType>Designer</SubType>
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>PatientFeedback.designer.cs</LastGenOutput>
+    </None>
+    <None Include="Hospital\PatientFeedback.dbml.layout">
+      <DependentUpon>PatientFeedback.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\PatientsEducationBrochure.dbml">
+      <SubType>Designer</SubType>
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>PatientsEducationBrochure.designer.cs</LastGenOutput>
+    </None>
+    <None Include="Hospital\PatientsEducationBrochure.dbml.layout">
+      <DependentUpon>PatientsEducationBrochure.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\PatientTestimonialMaster.dbml">
+      <SubType>Designer</SubType>
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>PatientTestimonialMaster.designer.cs</LastGenOutput>
+    </None>
+    <None Include="Hospital\PatientTestimonialMaster.dbml.layout">
+      <DependentUpon>PatientTestimonialMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\ScheduleNewsLetterMaster.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ScheduleNewsLetterMaster.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital\SpecializationMaster.dbml">
+      <SubType>Designer</SubType>
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>SpecializationMaster.designer.cs</LastGenOutput>
+    </None>
+    <None Include="Hospital\SpecializationMaster.dbml.layout">
+      <DependentUpon>SpecializationMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\StarOfMaster.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>StarOfMaster.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital\StatisticsChartMaster.dbml">
+      <SubType>Designer</SubType>
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>StatisticsChartMaster.designer.cs</LastGenOutput>
+    </None>
+    <None Include="Hospital\StatisticsChartMaster.dbml.layout">
+      <DependentUpon>StatisticsChartMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\StentPriceMaster.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>StentPriceMaster.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital\UnitMaster.dbml">
+      <SubType>Designer</SubType>
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>UnitMaster.designer.cs</LastGenOutput>
+    </None>
+    <None Include="Hospital\UnitMaster.dbml.layout">
+      <DependentUpon>UnitMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\UnmicrCareer.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>UnmicrCareer.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Hospital\VisionMissionMaster.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>VisionMissionMaster.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="Recruitment\RecruitmentAdvertisementCodeMaster.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>RecruitmentAdvertisementCodeMaster.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Recruitment\RecruitmentAdvertisementSourceMasterDetails.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>RecruitmentAdvertisementSourceMasterDetails.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Recruitment\RecruitmentEducationTypeMaster.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>RecruitmentEducationTypeMaster.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Recruitment\Recruitments.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Recruitments.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Rights\AdminMenuLink.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>AdminMenuLink.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Rights\ChatBoxMaster.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>ChatBoxMaster.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Rights\RoleMaster.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>RoleMaster.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Rights\UserMaster.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>UserMaster.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Recruitment\Recruitments.dbml.layout">
+      <DependentUpon>Recruitments.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CandidateDetails.dbml.layout">
+      <DependentUpon>CandidateDetails.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Rights\UserMaster.dbml.layout">
+      <DependentUpon>UserMaster.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Rights\RoleMaster.dbml.layout">
+      <DependentUpon>RoleMaster.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Rights\AdminMenuLink.dbml.layout">
+      <DependentUpon>AdminMenuLink.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CMS.dbml.layout">
+      <DependentUpon>CMS.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Faculty.dbml.layout">
+      <DependentUpon>Faculty.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Common\PaymentGateway.dbml.layout">
+      <DependentUpon>PaymentGateway.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ExecutiveLeadershipMaster.dbml.layout">
+      <DependentUpon>ExecutiveLeadershipMaster.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Hospital\UnmicrCareer.dbml.layout">
+      <DependentUpon>UnmicrCareer.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\ScheduleNewsLetterMaster.dbml.layout">
+      <DependentUpon>ScheduleNewsLetterMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\StentPriceMaster.dbml.layout">
+      <DependentUpon>StentPriceMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Rights\ChatBoxMaster.dbml.layout">
+      <DependentUpon>ChatBoxMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\FooterQuickLink.dbml.layout">
+      <DependentUpon>FooterQuickLink.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\StarOfMaster.dbml.layout">
+      <DependentUpon>StarOfMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\EventFormField.dbml.layout">
+      <DependentUpon>EventFormField.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\OtherFacilitiesMaster.dbml.layout">
+      <DependentUpon>OtherFacilitiesMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\ContributionTransactionMaster.dbml.layout">
+      <DependentUpon>ContributionTransactionMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\DepartmentTab.dbml.layout">
+      <DependentUpon>DepartmentTab.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\DailyEntryVisitMaster.dbml.layout">
+      <DependentUpon>DailyEntryVisitMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\ICUOnWheelMaster.dbml.layout">
+      <DependentUpon>ICUOnWheelMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\BannerSubDetails.dbml.layout">
+      <DependentUpon>BannerSubDetails.dbml</DependentUpon>
+    </None>
+    <None Include="Recruitment\RecruitmentAdvertisementCodeMaster.dbml.layout">
+      <DependentUpon>RecruitmentAdvertisementCodeMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Recruitment\RecruitmentAdvertisementSourceMasterDetails.dbml.layout">
+      <DependentUpon>RecruitmentAdvertisementSourceMasterDetails.dbml</DependentUpon>
+    </None>
+    <None Include="Recruitment\RecruitmentEducationTypeMaster.dbml.layout">
+      <DependentUpon>RecruitmentEducationTypeMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\CandidateBasicDetails.dbml.layout">
+      <DependentUpon>CandidateBasicDetails.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\AboutNursingCareMaster.dbml.layout">
+      <DependentUpon>AboutNursingCareMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\ComplaintEnquiryMaster.dbml.layout">
+      <DependentUpon>ComplaintEnquiryMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Common\MenuMaster.dbml.layout">
+      <DependentUpon>MenuMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Common\HomePage.dbml.layout">
+      <DependentUpon>HomePage.dbml</DependentUpon>
+    </None>
+    <None Include="Common\NewsLetterMaster.dbml.layout">
+      <DependentUpon>NewsLetterMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Common\GlobalSearchMaster.dbml.layout">
+      <DependentUpon>GlobalSearchMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Common\HeaderFooterMaster.dbml.layout">
+      <DependentUpon>HeaderFooterMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Common\PackageMaster.dbml.layout">
+      <DependentUpon>PackageMaster.dbml</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Common\UserLogin.dbml.layout">
+      <DependentUpon>UserLogin.dbml</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Hospital\AffilationMaster.dbml.layout">
+      <DependentUpon>AffilationMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\VisionMissionMaster.dbml.layout">
+      <DependentUpon>VisionMissionMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\OurExcellenceMasterStatisticsDetails.dbml.layout">
+      <DependentUpon>OurExcellenceMasterStatisticsDetails.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\OurExcellenceMasterFacultyDetails.dbml.layout">
+      <DependentUpon>OurExcellenceMasterFacultyDetails.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\EquipmentMaster.dbml.layout">
+      <DependentUpon>EquipmentMaster.dbml</DependentUpon>
+    </None>
+    <None Include="Hospital\FacilitesMaster.dbml.layout">
+      <DependentUpon>FacilitesMaster.dbml</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.        Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

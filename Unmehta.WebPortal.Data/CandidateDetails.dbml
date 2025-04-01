@@ -1,0 +1,529 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="CandidateDetailsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.21,1433;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString1" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GetAllCandidateCourseDetails" Method="GetAllCandidateCourseDetails">
+    <ElementType Name="GetAllCandidateCourseDetailsResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CandidateId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CourseTitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Duration" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="InstituteName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllCandidateFamilyDetails" Method="GetAllCandidateFamilyDetails">
+    <ElementType Name="GetAllCandidateFamilyDetailsResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CandidateId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="MemberName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Age" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="RelationId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Occupation" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MonthlyIncome" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetCandidateCourseDetailsById" Method="GetCandidateCourseDetailsById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetCandidateCourseDetailsByIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CandidateId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="CourseTitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Duration" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="InstituteName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetCandidateDetailsById" Method="GetCandidateDetailsById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetCandidateDetailsByIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Advertisementid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MiddleName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MotherName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DateOfBirth" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Age" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Mobile" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EmailId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CasteId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Gender" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Religion" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="MaritalStatus" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SpouseFirstName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SpouseMiddleName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SpouseSurname" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SpouseDOB" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="SpouseContact" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EmergencyContactPersonName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EmergencyContactNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UserPassword" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PhotographName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PhotographPath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SignatureName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SignaturePath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RoleInLastEmployment" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CurrentSalaryPerMonth" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ExpectedSalary" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ExtraActivities" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MemberShipOfAnySpecialBodies" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="HaveChronicIllness" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ChronicIllnessDetails" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsOffenceRegistered" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="OffneceDetails" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DescribeYourself" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="BiggestAchivement" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="YourBiggestFailure" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="VisionInNextYears" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Remarks" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AdvertisementAwarenessSource" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetCandidateFamilyDetailsById" Method="GetCandidateFamilyDetailsById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetCandidateFamilyDetailsByIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CandidateId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="MemberName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Age" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="RelationId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Occupation" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MonthlyIncome" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateCandidateCourseDetails" Method="InsertOrUpdateCandidateCourseDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="CandidateId" Parameter="candidateId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="CourseTitle" Parameter="courseTitle" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Duration" Parameter="duration" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="InstituteName" Parameter="instituteName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="CITY" Parameter="cITY" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsVisible" Parameter="isVisible" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(500)" />
+    <ElementType Name="InsertOrUpdateCandidateCourseDetailsResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateCandidateFamilyDetails" Method="InsertOrUpdateCandidateFamilyDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="CandidateId" Parameter="candidateId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="MemberName" Parameter="memberName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Age" Parameter="age" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="RelationId" Parameter="relationId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Occupation" Parameter="occupation" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="MonthlyIncome" Parameter="monthlyIncome" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="IsVisible" Parameter="isVisible" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(500)" />
+    <ElementType Name="InsertOrUpdateCandidateFamilyDetailsResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.RemoveCandidateCourseDetails" Method="RemoveCandidateCourseDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveCandidateProfessionalReferralDetails" Method="RemoveCandidateProfessionalReferralDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveCandidateDetails" Method="RemoveCandidateDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveCandidateEducationDetails" Method="RemoveCandidateEducationDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveCandidateExperienceDetails" Method="RemoveCandidateExperienceDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveCandidateFamilyDetails" Method="RemoveCandidateFamilyDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetAllCandidateProfessionalReferralDetails" Method="GetAllCandidateProfessionalReferralDetails">
+    <ElementType Name="GetAllCandidateProfessionalReferralDetailsResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Candidateid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MobileNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RelationShip" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="YearsKnown" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Regid" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetCandidateIndexedJournalDetailsById" Method="GetCandidateIndexedJournalDetailsById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetCandidateIndexedJournalDetailsByIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CandidateId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="NameOfTheJournal" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Topic" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Month" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Year" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NationalInternational" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PublicationAcceptance" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetCandidateNonIndexedJournalDetailsById" Method="GetCandidateNonIndexedJournalDetailsById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetCandidateNonIndexedJournalDetailsByIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CandidateId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="NameOfTheJournal" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Topic" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Month" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="Year" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NationalInternational" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PublicationAcceptance" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateCandidateIndexedJournal" Method="InsertOrUpdateCandidateIndexedJournal">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="CandidateId" Parameter="candidateId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="NameOfTheJournal" Parameter="nameOfTheJournal" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Topic" Parameter="topic" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Month" Parameter="month" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="Year" Parameter="year" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="NationalInternational" Parameter="nationalInternational" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PublicationAcceptance" Parameter="publicationAcceptance" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(500)" />
+    <ElementType Name="InsertOrUpdateCandidateIndexedJournalResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateCandidateNonIndexedJournal" Method="InsertOrUpdateCandidateNonIndexedJournal">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="CandidateId" Parameter="candidateId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="NameOfTheJournal" Parameter="nameOfTheJournal" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Topic" Parameter="topic" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Month" Parameter="month" Type="System.String" DbType="NVarChar(10)" />
+    <Parameter Name="Year" Parameter="year" Type="System.String" DbType="NVarChar(100)" />
+    <Parameter Name="NationalInternational" Parameter="nationalInternational" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PublicationAcceptance" Parameter="publicationAcceptance" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(500)" />
+    <ElementType Name="InsertOrUpdateCandidateNonIndexedJournalResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.RemoveCandidateIndexedJournalDetails" Method="RemoveCandidateIndexedJournalDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveCandidateNonIndexedJournalDetails" Method="RemoveCandidateNonIndexedJournalDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertOrUpdateCandidateProfessionalReferralDetails" Method="InsertOrUpdateCandidateProfessionalReferralDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="CandidateId" Parameter="candidateId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Position" Parameter="position" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="MobileNo" Parameter="mobileNo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="RelationShip" Parameter="relationShip" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="YearsKnown" Parameter="yearsKnown" Type="System.Double" DbType="Float" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="Address" Parameter="address" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Regid" Parameter="regid" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="InsertOrUpdateCandidateProfessionalReferralDetailsResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetCandidateProfessionalReferralDetailsById" Method="GetCandidateProfessionalReferralDetailsById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetCandidateProfessionalReferralDetailsByIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Candidateid" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Position" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MobileNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RelationShip" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="YearsKnown" Type="System.Double" DbType="Float" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Regid" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetCandidateExperienceTotalByCandidateId" Method="GetCandidateExperienceTotalByCandidateId">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetCandidateExperienceTotalByCandidateIdResult">
+      <Column Name="Years" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Months" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Days" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetCandidateDetailsForExtraExperienceByCanId" Method="GetCandidateDetailsForExtraExperienceByCanId">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetCandidateDetailsForExtraExperienceByCanIdResult">
+      <Column Name="RoleInLastEmployment" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CurrentSalaryPerMonth" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ExpectedSalary" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetCandidateDetailsForExtraTeachingPostsByCanId" Method="GetCandidateDetailsForExtraTeachingPostsByCanId">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetCandidateDetailsForExtraTeachingPostsByCanIdResult">
+      <Column Name="IndependentWorkWithResult" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="WorkUnderSupervision" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ConferenceAttendanceAndPaper" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.UpdateCandidateDetailsForExperience" Method="UpdateCandidateDetailsForExperience">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="RoleInLastEmployment" Parameter="roleInLastEmployment" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="CurrentSalaryPerMonth" Parameter="currentSalaryPerMonth" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="ExpectedSalary" Parameter="expectedSalary" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateCandidateDetailsExtraInformation" Method="UpdateCandidateDetailsExtraInformation">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="RoleInLastEmployment" Parameter="roleInLastEmployment" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="CurrentSalaryPerMonth" Parameter="currentSalaryPerMonth" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="ExpectedSalary" Parameter="expectedSalary" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="ExtraActivities" Parameter="extraActivities" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="MemberShipOfAnySpecialBodies" Parameter="memberShipOfAnySpecialBodies" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="HaveChronicIllness" Parameter="haveChronicIllness" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="ChronicIllnessDetails" Parameter="chronicIllnessDetails" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsOffenceRegistered" Parameter="isOffenceRegistered" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="OffneceDetails" Parameter="offneceDetails" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="DescribeYourself" Parameter="describeYourself" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="BiggestAchivement" Parameter="biggestAchivement" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="YourBiggestFailure" Parameter="yourBiggestFailure" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="VisionInNextYears" Parameter="visionInNextYears" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Remarks" Parameter="remarks" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AdvertisementAwarenessSource" Parameter="advertisementAwarenessSource" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="EmergencyContactPersonName" Parameter="emergencyContactPersonName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="EmergencyContactNo" Parameter="emergencyContactNo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="UNMICRCContact" Parameter="uNMICRCContact" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertOrUpdateCandidateDetails" Method="InsertOrUpdateCandidateDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Advertisementid" Parameter="advertisementid" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="RegisrationId" Parameter="regisrationId" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="FirstName" Parameter="firstName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="MiddleName" Parameter="middleName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="LastName" Parameter="lastName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AadharCard" Parameter="aadharCard" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="MotherName" Parameter="motherName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="DateOfBirth" Parameter="dateOfBirth" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Age" Parameter="age" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Mobile" Parameter="mobile" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="EmailId" Parameter="emailId" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ParmenentAddress" Parameter="parmenentAddress" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ParmenentPincode" Parameter="parmenentPincode" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ParmenentPhoneR" Parameter="parmenentPhoneR" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ParmenentPhoneM" Parameter="parmenentPhoneM" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ParmenentCountry" Parameter="parmenentCountry" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ParmenentState" Parameter="parmenentState" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ParmenentCity" Parameter="parmenentCity" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="PresentAddress" Parameter="presentAddress" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="PresentPincode" Parameter="presentPincode" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="PresentPhoneR" Parameter="presentPhoneR" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="PresentPhoneM" Parameter="presentPhoneM" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="PresentCountry" Parameter="presentCountry" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="PresentState" Parameter="presentState" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="PresentCity" Parameter="presentCity" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="CasteId" Parameter="casteId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Gender" Parameter="gender" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Religion" Parameter="religion" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="MaritalStatus" Parameter="maritalStatus" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="SpouseFirstName" Parameter="spouseFirstName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="SpouseMiddleName" Parameter="spouseMiddleName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="SpouseSurname" Parameter="spouseSurname" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="SpouseDOB" Parameter="spouseDOB" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="SpouseContact" Parameter="spouseContact" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="EmergencyContactPersonName" Parameter="emergencyContactPersonName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="EmergencyContactNo" Parameter="emergencyContactNo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Password" Parameter="password" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="PhotographName" Parameter="photographName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="PhotographPath" Parameter="photographPath" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="SignatureName" Parameter="signatureName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="SignaturePath" Parameter="signaturePath" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(500)" />
+    <ElementType Name="InsertOrUpdateCandidateDetailsResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.UpdateCandidateDetailsForTeachingPosts" Method="UpdateCandidateDetailsForTeachingPosts">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IndependentWorkWithResult" Parameter="independentWorkWithResult" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="WorkUnderSupervision" Parameter="workUnderSupervision" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ConferenceAttendanceAndPaper" Parameter="conferenceAttendanceAndPaper" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UpdateCandidateDetailsForAcademic" Method="UpdateCandidateDetailsForAcademic">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IsBasicComputerLiteracy" Parameter="isBasicComputerLiteracy" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Other" Parameter="other" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertOrUpdateCandidateEducationDetails" Method="InsertOrUpdateCandidateEducationDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="CandidateId" Parameter="candidateId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EducationId" Parameter="educationId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EducationTypeId" Parameter="educationTypeId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="RegisrationId" Parameter="regisrationId" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="NameOfSchoolCollege" Parameter="nameOfSchoolCollege" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="BoardUniversity" Parameter="boardUniversity" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="PassingYear" Parameter="passingYear" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="MajorSubjects" Parameter="majorSubjects" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="PercentageOrPercentile" Parameter="percentageOrPercentile" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="Division" Parameter="division" Type="System.String" DbType="NChar(10)" />
+    <Parameter Name="IsVisible" Parameter="isVisible" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="CertificateFileName" Parameter="certificateFileName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="CertificateFilePath" Parameter="certificateFilePath" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(500)" />
+    <ElementType Name="InsertOrUpdateCandidateEducationDetailsResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllCandidateEducationDetails" Method="GetAllCandidateEducationDetails">
+    <ElementType Name="GetAllCandidateEducationDetailsResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CandidateId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EducationId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="NameOfSchoolCollege" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="BoardUniversity" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="PassingYear" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MajorSubjects" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PercentageOrPercentile" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Division" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CertificateFileName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CertificateFilePath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetCandidateEducationDetailsById" Method="GetCandidateEducationDetailsById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetCandidateEducationDetailsByIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CandidateId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="EducationId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="NameOfSchoolCollege" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="BoardUniversity" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="PassingYear" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MajorSubjects" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PercentageOrPercentile" Type="System.Decimal" DbType="Decimal(18,2) NOT NULL" CanBeNull="false" />
+      <Column Name="Division" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="CertificateFileName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CertificateFilePath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetCandidateDetailsForAcademicByCanId" Method="GetCandidateDetailsForAcademicByCanId">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetCandidateDetailsForAcademicByCanIdResult">
+      <Column Name="IsBasicComputerLiteracy" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Other" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateCandidateExperienceDetails" Method="InsertOrUpdateCandidateExperienceDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="CandidateId" Parameter="candidateId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="JobType" Parameter="jobType" Type="System.Int32" DbType="Int" />
+    <Parameter Name="FromDate" Parameter="fromDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="ToDate" Parameter="toDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="Designation" Parameter="designation" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="OrganizationName" Parameter="organizationName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="OrganizationAddress" Parameter="organizationAddress" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ReportingAuthority" Parameter="reportingAuthority" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="SalaryPerMonth" Parameter="salaryPerMonth" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="ReasonForChange" Parameter="reasonForChange" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="PostTypeId" Parameter="postTypeId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="DepartmentName" Parameter="departmentName" Type="System.String" DbType="NVarChar(300)" />
+    <Parameter Name="ExperienceCertificateFileName" Parameter="experienceCertificateFileName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ExperienceCertificateFilePath" Parameter="experienceCertificateFilePath" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(500)" />
+    <ElementType Name="InsertOrUpdateCandidateExperienceDetailsResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetCandidateExperienceDetailsById" Method="GetCandidateExperienceDetailsById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetCandidateExperienceDetailsByIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CandidateId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="JobType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FromDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="ToDate" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Designation" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="OrganizationName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="OrganizationAddress" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ReportingAuthority" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SalaryPerMonth" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ReasonForChange" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PostTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PostName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DepartmentName" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="ExperienceCertificateFileName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ExperienceCertificateFilePath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllCandidateExperienceDetails" Method="GetAllCandidateExperienceDetails">
+    <ElementType Name="GetAllCandidateExperienceDetailsResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CandidateId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="JobType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FromDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="ToDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Experience" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Designation" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="OrganizationName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="OrganizationAddress" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ReportingAuthority" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SalaryPerMonth" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="ReasonForChange" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PostTypeId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PostName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DepartmentName" Type="System.String" DbType="NVarChar(300)" CanBeNull="true" />
+      <Column Name="ExperienceCertificateFileName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ExperienceCertificateFilePath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllCandidateIndexedJournal" Method="GetAllCandidateIndexedJournal">
+    <ElementType Name="GetAllCandidateIndexedJournalResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CandidateId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="NameOfTheJournal" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Topic" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Month" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="MonthName" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="Year" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NationalInternational" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PublicationAcceptance" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllCandidateNonIndexedJournal" Method="GetAllCandidateNonIndexedJournal">
+    <ElementType Name="GetAllCandidateNonIndexedJournalResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CandidateId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="NameOfTheJournal" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Topic" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Month" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
+      <Column Name="MonthName" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="Year" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="NationalInternational" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="PublicationAcceptance" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

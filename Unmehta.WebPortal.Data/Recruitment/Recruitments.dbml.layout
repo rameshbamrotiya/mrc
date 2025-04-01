@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 12, 11.75" name="Recruitments">
+  <DataContextMoniker Name="/RecruitmentsDataContext" />
+  <nestedChildShapes>
+    <classShape Id="9df0cb4a-6a03-494e-9fbe-27b073a566c4" absoluteBounds="3.75, 3.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/RecruitmentsDataContext/RecruitmentCastMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="f8a833cf-1308-4fee-9e6c-9036cfa5fb99" absoluteBounds="3.765, 4.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="b815ba2a-a1e3-4c76-8d2b-cb6a6d9139c9" absoluteBounds="6.75, 0.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/RecruitmentsDataContext/RecruitmentCityMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="579f7d0f-daad-4088-8c9f-a1380d4d1ab6" absoluteBounds="6.765, 1.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="90173ccf-afd1-42f9-9857-ca9c6d0a361d" absoluteBounds="0.75, 7.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/RecruitmentsDataContext/RecruitmentRelationMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="4753da1c-20ce-4cc5-ba0a-5d2df975fb41" absoluteBounds="0.765, 8.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="81bc0bc1-a6ae-44c3-aba3-0daa341bf88c" absoluteBounds="3.75, 8.75, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/RecruitmentsDataContext/RecruitmentReligiontMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="feca6edd-e63e-4d0a-8f19-9edec2613ab9" absoluteBounds="3.765, 9.21, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="56c24746-524b-4034-87e2-363f53ec0bb2" absoluteBounds="3.875, 1.25, 2, 1.3862939453125">
+      <DataClassMoniker Name="/RecruitmentsDataContext/RecruitmentAdvertisementMasterDetail" />
+      <nestedChildShapes>
+        <elementListCompartment Id="3a34a425-a8b7-49b2-ba6d-90edbc2cd715" absoluteBounds="3.8899999999999997, 1.71, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="e8d620d5-b03d-4052-977a-9d950dc911c0" absoluteBounds="6.625, 4.875, 2, 2.9247054036458331">
+      <DataClassMoniker Name="/RecruitmentsDataContext/RecruitmentEducationMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="19698cfd-1205-472f-bc45-00cbd63986a1" absoluteBounds="6.64, 5.335, 1.9700000000000002, 2.364705403645833" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="91a163e5-08eb-4b8d-9231-06354524c452" absoluteBounds="0.5, 1.25, 2.375, 3.8862125651041666">
+      <DataClassMoniker Name="/RecruitmentsDataContext/RecruitmentAdvertisementMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="dc34c1c9-605c-49c1-aa72-3a9e30574255" absoluteBounds="0.515, 1.71, 2.3449999999999998, 3.3262125651041665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="60974177-5d03-4256-86c6-27f8d9bd11fb" absoluteBounds="9.75, 1.25, 2, 2.7324039713541666">
+      <DataClassMoniker Name="/RecruitmentsDataContext/CMSHolidayMaster" />
+      <nestedChildShapes>
+        <elementListCompartment Id="a3477940-c824-4668-a18b-17e19d4dc1e2" absoluteBounds="9.765, 1.71, 1.9700000000000002, 2.1724039713541665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

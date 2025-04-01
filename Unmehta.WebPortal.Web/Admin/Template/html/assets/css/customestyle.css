@@ -1,0 +1,182 @@
+﻿/*common class start*/
+:root {
+    --maroon: #c90f40;
+    --blue: #00298b;
+    --white: #ffffff;
+    --black: #000000;
+    --input_border: #CED4D6;
+    --input_border: #000000;
+}
+
+/*common class end*/
+
+
+
+
+
+
+
+
+.form_style .card, .lockscreen-wrapper .card {
+    background-color: #07050599;
+}
+
+/*login register css start*/
+/*.login_register{
+    overflow:hidden;
+}*/
+.login_register.form-membership {
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 9999;
+    padding: 0;
+}
+.login_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    margin: 0 auto !important;
+    
+}
+    .login_content .container {
+         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px !important;
+        position: relative;
+        border-top: 3px solid var(--maroon);
+        border-radius: 4px !important;
+        margin: 0 auto !important;
+        background: rgba(255,255,255, .6);
+       background: #ffffff;
+        padding: 35px;
+        /*background: #393188cc;*/
+    }
+    .login_content .left_block{
+        border-right:1px solid var(--maroon);
+    }
+    .login_register .form-wrapper {
+        box-shadow: none !important;
+        width: auto !important;
+        margin: 0 !important;
+        padding:10px !important;
+    }
+
+.login_register .signin_btn {
+    background: var(--maroon);
+    border-color:var(--maroon);
+    border-radius: 4px;
+}
+
+.login_register .register_btn {
+    color: var(--maroon) !important;
+    font-weight:700;
+}
+
+.login_register .top_logo {
+    text-align: center;
+}
+
+    .login_register .top_logo img {
+        position: relative;
+        top: 0px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        margin: 0 auto;
+        width:100%;
+        max-width:90px;
+    }
+
+.login_register #logo h3 {
+    color: var(--maroon);
+}
+
+.login_register .form-control {
+    border-radius: 4px;
+    border-color: var(--input_border);
+    height: 42px !important;
+    background:var(--white);
+}
+
+.login_register .bg_slider img {
+    width: 100%;
+    height: 100%;
+}
+#btnRun {
+    color: var(--white);
+    background: var(--maroon);
+    border-radius: 5px;
+    margin-left: 12px;
+}
+.form_style .form-control {
+    border-radius: 4px;
+    border-color: var(--input_border);
+    height: 45px !important;
+    background: var(--white);
+}
+.change_psw_title{
+    color:var(--white);
+}
+
+.change_psw_info{
+    position:relative;
+    z-index:9999;
+}
+    .change_psw_info:after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        background: url('../media/image/slide-img2.jpg') no-repeat center top;
+        background-size: cover;
+    }
+.change_psw_info label {
+    font-weight: 600 !important;
+    margin-bottom:3px;
+    color:var(--white);
+}
+.psw_btn{
+    background:var(--maroon);
+    color:var(--white);
+}
+    .psw_btn:hover{
+        color:var(--white);
+    }
+    .commonbtn {
+        background: var(--maroon);
+        color: var(--white);
+    }
+.commonbtn:hover{
+    color:var(--white);
+}
+
+
+.latest_info_wrap ul li{
+    display:flex;
+}
+    .latest_info_wrap ul li a{
+        font-size:16px;
+        color:var(--blue) !important;
+        display:block;
+        margin-bottom:15px;
+    }
+    .latest_info_wrap ul li i {
+        font-size: 20px;
+        color: var(--maroon);
+    }
+
+
+.imp_news{
+    color:var(--maroon);
+}
+
+@media screen and (max-width:992px) {
+    .register.login_register .form-wrapper {
+        margin: 235px auto !important;
+        max-width:90%;
+    }
+}
+/*login register css end*/

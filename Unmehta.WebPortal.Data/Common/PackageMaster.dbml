@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="PackageMasterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.2;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GetAllPackageMaster" Method="GetAllPackageMaster">
+    <Parameter Name="Language_id" Parameter="language_id" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllPackageMasterResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllPackageSubMasterDetails" Method="GetAllPackageSubMasterDetails">
+    <Parameter Name="PackageId" Parameter="packageId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllPackageSubMasterDetailsResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="PackageDetails_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="SubTitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Decimal(10,2)" CanBeNull="true" />
+      <Column Name="PackageId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PackageType" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Img_path" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Is_active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Added_by" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Added_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modify_by" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="Modify_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Is_delete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Ip_add" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllPackageTypeMaster" Method="GetAllPackageTypeMaster">
+    <Parameter Name="LangId" Parameter="langId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllPackageTypeMasterResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="PackageType" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="Is_active" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Added_by" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Added_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Modify_by" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Modify_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Is_delete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Ip_add" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

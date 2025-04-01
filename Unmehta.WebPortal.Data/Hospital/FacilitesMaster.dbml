@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="FacilitesMasterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-B7AUVFOV;Initial Catalog=UNMehta;Integrated Security=True" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString5" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.RemoveFacilitesMaster" Method="RemoveFacilitesMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="VarChar(500)" />
+    <ElementType Name="RemoveFacilitesMasterResult">
+      <Column Name="RecId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.RemoveFacilitesMasterImageDetails" Method="RemoveFacilitesMasterImageDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int32" DbType="Int" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="RemoveFacilitesMasterImageDetailsResult">
+      <Column Name="RecId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllFacilitesImageMasterByFacilitiesIdAndLanguageId" Method="GetAllFacilitesImageMasterByFacilitiesIdAndLanguageId">
+    <Parameter Name="FacilitiesId" Parameter="facilitiesId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllFacilitesImageMasterByFacilitiesIdAndLanguageIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="FacilitiesId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="FacilitesFileInfo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FacilitesFileName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SequanceNo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateFacilitesImageMaster" Method="InsertOrUpdateFacilitesImageMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="FacilitiesId" Parameter="facilitiesId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="FacilitesFileInfo" Parameter="facilitesFileInfo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="FacilitesFileName" Parameter="facilitesFileName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="SequanceNo" Parameter="sequanceNo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IsVisible" Parameter="isVisible" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(500)" />
+    <ElementType Name="InsertOrUpdateFacilitesImageMasterResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateFacilitesMaster" Method="InsertOrUpdateFacilitesMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="FacilitesName" Parameter="facilitesName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Status" Parameter="status" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="IsVisible" Parameter="isVisible" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(500)" />
+    <ElementType Name="InsertOrUpdateFacilitesMasterResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllFacilitesMaster" Method="GetAllFacilitesMaster">
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllFacilitesMasterResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="FacilitesName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Status" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="FacilitesStatus" Type="System.String" DbType="VarChar(9) NOT NULL" CanBeNull="false" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

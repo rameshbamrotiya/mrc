@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="GlobalSearchMasterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.2;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString2" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GetAllDetailMetaDescription" Method="GetAllDetailMetaDescription">
+    <Parameter Name="LangId" Parameter="langId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Search" Parameter="search" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="GetAllDetailMetaDescriptionResult">
+      <Column Name="Id" Type="System.Decimal" DbType="Decimal(19,0)" CanBeNull="true" />
+      <Column Name="PageName" Type="System.String" DbType="VarChar(15) NOT NULL" CanBeNull="false" />
+      <Column Name="LanguageId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="MetaTitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MetaDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

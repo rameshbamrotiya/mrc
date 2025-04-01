@@ -1,0 +1,30 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SchemaDetails.aspx.cs" Inherits="Unmehta.WebPortal.Web.SchemaDetails" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="Title" runat="server">
+    UnMehta - Schema List
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="TopStyle" runat="server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="body" runat="server">
+    <div class="page-title">
+        <img src="<%=strHeaderImage%>" class="img-fluid" alt="banner" />
+        <div class="container-fluid">
+            <ul class="page-breadcrumb">
+                <li><a href="<%=ResolveUrl("~/") %>"><i class="fas fa-home"></i></a></li>
+                <li>/</li>
+                <li>Schema Details</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="content">
+        <div class="rs-degree style1 modify gray-bg">
+            <div class="container">
+                <div class="row y-middle" id="dvDesc" runat="server">
+                </div>
+            </div>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="BottomJs" runat="server">
+</asp:Content>

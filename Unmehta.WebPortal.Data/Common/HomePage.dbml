@@ -1,0 +1,263 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="HomePageDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.2;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString2" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GetAllPhotoAlbumListByLangId" Method="GetAllPhotoAlbumListByLangId">
+    <Parameter Name="LangId" Parameter="langId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllPhotoAlbumListByLangIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ImagePath" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="Descriptions" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AlbumLevel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllSupportServiceByLangId" Method="GetAllSupportServiceByLangId">
+    <Parameter Name="LangId" Parameter="langId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllSupportServiceByLangIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SSName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="SSImg" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="SSIcon" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetDirectorMasterByLangId" Method="GetDirectorMasterByLangId">
+    <Parameter Name="LangId" Parameter="langId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetDirectorMasterByLangIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DOCPath" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="DirectorMesshtmlContent" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="MetaDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MetaTitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllBannerMasterHomePage" Method="GetAllBannerMasterHomePage">
+    <ElementType Name="GetAllBannerMasterHomePageResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="Descriptions" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="URL" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Ranks" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="IsElection" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllStatisticsChartMaster" Method="GetAllStatisticsChartMaster">
+    <ElementType Name="GetAllStatisticsChartMasterResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ChartName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="XColName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="YColName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllStatisticsChartMasterDetails" Method="GetAllStatisticsChartMasterDetails">
+    <ElementType Name="GetAllStatisticsChartMasterDetailsResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ChartId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ColumnName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ColumnValue" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="SequanceNo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllOPDMainMaster" Method="GetAllOPDMainMaster">
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllOPDMainMasterResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="WeekName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="DepartmentName" Type="System.String" DbType="NVarChar(200)" CanBeNull="true" />
+      <Column Name="StartTime" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="EndTime" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="UnitName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PlaceIncharge" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="UnitList" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllHealthTipsMaster" Method="GetAllHealthTipsMaster">
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllHealthTipsMasterResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Health_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ShortDesc" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="InnerDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Imgpath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="InnerImgpath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Date" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="DoctorID" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Language_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="is_delete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="DoctorName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllNursingCareImage" Method="GetAllNursingCareImage">
+    <ElementType Name="GetAllNursingCareImageResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NursingCareDetail_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Img_path" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Is_active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="added_by" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="added_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="modify_by" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="modify_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Is_delete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Ip_add" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllAwardMasterHomePageByLanguageId" Method="GetAllAwardMasterHomePageByLanguageId">
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllAwardMasterHomePageByLanguageIdResult">
+      <Column Name="AwardId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AlbumName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AlbumType" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="AlbumDesc" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AwardShortDesc" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AccredationDesc" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AwardMonthYear" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ImageName" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="ImageDesc" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="LevelId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllFutureVisionDetailsByLanguageId" Method="GetAllFutureVisionDetailsByLanguageId">
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllFutureVisionDetailsByLanguageIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="ImagePath" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllPatientCareTypeByLangId" Method="GetAllPatientCareTypeByLangId">
+    <Parameter Name="LangId" Parameter="langId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllPatientCareTypeByLangIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="CategoryName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="FormType" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetNursingCareLanguageId" Method="GetNursingCareLanguageId">
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetNursingCareLanguageIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="NursingCare_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Language_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="is_delete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MetaTitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MetaDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MainImgpath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllVideoGallayListById" Method="GetAllVideoGallayListById">
+    <Parameter Name="AlbumId" Parameter="albumId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LangId" Parameter="langId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllVideoGallayListByIdResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Video_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Video_name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Video_desc" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Video_path" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MetaTitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MetaDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Language_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="is_delete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Link_Video_Upload" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Video_level_id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Is_download" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Department_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ThumbImg_path" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="VideoCategoryid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllVideoAlbum" Method="GetAllVideoAlbum">
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllVideoAlbumResult">
+      <Column Name="AlbumId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="VideoCategoryName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="TagList" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ThumbnillPath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllEventsAsPerLanguageId" Method="GetAllEventsAsPerLanguageId">
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllEventsAsPerLanguageIdResult">
+      <Column Name="EventId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="EventName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Venue" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="EventStartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EventEndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="StartTimeHH" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="StartTimeMM" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="StartTimeTT" Type="System.String" DbType="VarChar(MAX)" CanBeNull="true" />
+      <Column Name="MainImg" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetWebSiteCount" Method="GetWebSiteCount">
+    <ElementType Name="GetWebSiteCountResult">
+      <Column Name="VisitCount" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.UpdateWebSiteCount" Method="UpdateWebSiteCount">
+    <Parameter Name="IPAddress" Parameter="iPAddress" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IPDate" Parameter="iPDate" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetAllVideoAlbumListByLangId" Method="GetAllVideoAlbumListByLangId">
+    <Parameter Name="LangId" Parameter="langId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllVideoAlbumListByLangIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="VideoName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="VideoDesc" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="VideoPath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Link_Video_Upload" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="AlbumLevel" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="ThumbImg_path" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllSchemeMasterHomePageByLanguageId" Method="GetAllSchemeMasterHomePageByLanguageId">
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllSchemeMasterHomePageByLanguageIdResult">
+      <Column Name="recid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="SchemeName" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="SchemeLogo" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="Schemebanner" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="ContactPerson" Type="System.String" DbType="NVarChar(200) NOT NULL" CanBeNull="false" />
+      <Column Name="HelpDeskNo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="location" Type="System.String" DbType="VarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="WebsiteUrl" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllSchemaChartDetails" Method="GetAllSchemaChartDetails">
+    <Parameter Name="SchemaId" Parameter="schemaId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllSchemaChartDetailsResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="SchemeId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ChartId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="SequanceNo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeleteBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DeleteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="ChartName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.PROC_GetAllContributionMasterDetails" Method="PROC_GetAllContributionMasterDetails">
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="PROC_GetAllContributionMasterDetailsResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Contribution_Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Language_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="PageDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="OfflineDonationDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MetaTitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MetaDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Is_active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

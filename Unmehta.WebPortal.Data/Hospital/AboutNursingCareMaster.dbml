@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="AboutNursingCareMasterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.21,1433;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString1" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GetAllNursingCareMasterPhotoDetailsByLanguageId" Method="GetAllNursingCareMasterPhotoDetailsByLanguageId">
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllNursingCareMasterPhotoDetailsByLanguageIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="PhotoName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllAboutNursingCareMasterByLanguageId" Method="GetAllAboutNursingCareMasterByLanguageId">
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllAboutNursingCareMasterByLanguageIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="NursingCareDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="StaffMainPhoto" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateAboutNursingCareMaster" Method="InsertOrUpdateAboutNursingCareMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="NursingCareDescription" Parameter="nursingCareDescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="StaffMainPhoto" Parameter="staffMainPhoto" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertOrUpdateNursingCareMasterPhotoDetails" Method="InsertOrUpdateNursingCareMasterPhotoDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="PhotoName" Parameter="photoName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveAboutNursingCareMaster" Method="RemoveAboutNursingCareMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveNursingCareMasterPhotoDetails" Method="RemoveNursingCareMasterPhotoDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(MAX)" />
+  </Function>
+</Database>

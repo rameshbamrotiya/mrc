@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="ConfigDetailsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.2;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GetConfigdetailsByName" Method="GetConfigdetailsByName">
+    <Parameter Name="ParameterName" Parameter="parameterName" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="GetConfigdetailsByNameResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ParameterName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ParameterValue" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllCountryLangId" Method="GetAllCountryLangId">
+    <Parameter Name="LangId" Parameter="langId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetAllCountryLangIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllCityLangId" Method="GetAllCityLangId">
+    <Parameter Name="StateId" Parameter="stateId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LangId" Parameter="langId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetAllCityLangIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllStateLangId" Method="GetAllStateLangId">
+    <Parameter Name="CountId" Parameter="countId" Type="System.Int32" DbType="Int" />
+    <Parameter Name="LangId" Parameter="langId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetAllStateLangIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertUserLogInLogDetails" Method="InsertUserLogInLogDetails">
+    <Parameter Name="UserId" Parameter="userId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserLogDescription" Parameter="userLogDescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="LogInOrOut" Parameter="logInOrOut" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetPaymentConfigdetailsByName" Method="GetPaymentConfigdetailsByName">
+    <Parameter Name="ParameterName" Parameter="parameterName" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="GetPaymentConfigdetailsByNameResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ParameterName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ParameterValue" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

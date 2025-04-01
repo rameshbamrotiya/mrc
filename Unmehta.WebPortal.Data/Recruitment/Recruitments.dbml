@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="RecruitmentsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.2;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.RecruitmentCastMaster" Member="RecruitmentCastMasters">
+    <Type Name="RecruitmentCastMaster">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeleteBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DeleteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RecruitmentCityMaster" Member="RecruitmentCityMasters">
+    <Type Name="RecruitmentCityMaster">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeleteBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DeleteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RecruitmentRelationMaster" Member="RecruitmentRelationMasters">
+    <Type Name="RecruitmentRelationMaster">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeleteBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DeleteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RecruitmentReligiontMaster" Member="RecruitmentReligiontMasters">
+    <Type Name="RecruitmentReligiontMaster">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeleteBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DeleteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RecruitmentAdvertisementMasterDetails" Member="RecruitmentAdvertisementMasterDetails">
+    <Type Name="RecruitmentAdvertisementMasterDetail">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AdvertisementId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="QualificationId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RecruitmentEducationMaster" Member="RecruitmentEducationMasters">
+    <Type Name="RecruitmentEducationMaster">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="EducationDetailName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EducationType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeleteBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DeleteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.RecruitmentAdvertisementMaster" Member="RecruitmentAdvertisementMasters">
+    <Type Name="RecruitmentAdvertisementMaster">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AdvertisementName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MinEducationType" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="FileName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FromAge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ToAge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="CreateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="CreateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="UpdateBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="UpdateDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DeleteBy" Type="System.String" DbType="NVarChar(100)" CanBeNull="true" />
+      <Column Name="DeleteDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.CMSHolidayMaster" Member="CMSHolidayMasters">
+    <Type Name="CMSHolidayMaster">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="h_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="h_description" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="added_by" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="added_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="modify_by" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="modify_date" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="is_active" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="is_delete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="ip_add" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.GetAllRecruitmentAdvertisementMasterDetails" Method="GetAllRecruitmentAdvertisementMasterDetails">
+    <ElementType Name="GetAllRecruitmentAdvertisementMasterDetailsResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AdvertisementId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="QualificationId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllRecruitmentCastMaster" Method="GetAllRecruitmentCastMaster">
+    <ElementType Name="GetAllRecruitmentCastMasterResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllRecruitmentCityMaster" Method="GetAllRecruitmentCityMaster">
+    <ElementType Name="GetAllRecruitmentCityMasterResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllRecruitmentRelationMaster" Method="GetAllRecruitmentRelationMaster">
+    <ElementType Name="GetAllRecruitmentRelationMasterResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllRecruitmentReligiontMaster" Method="GetAllRecruitmentReligiontMaster">
+    <ElementType Name="GetAllRecruitmentReligiontMasterResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetRecruitmentCastMasterById" Method="GetRecruitmentCastMasterById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetRecruitmentCastMasterByIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetRecruitmentCityMasterById" Method="GetRecruitmentCityMasterById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetRecruitmentCityMasterByIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetRecruitmentRelationMasterById" Method="GetRecruitmentRelationMasterById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetRecruitmentRelationMasterByIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetRecruitmentReligiontMasterById" Method="GetRecruitmentReligiontMasterById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetRecruitmentReligiontMasterByIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateRecruitmentCastMaster" Method="InsertOrUpdateRecruitmentCastMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsVisible" Parameter="isVisible" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(500)" />
+    <ElementType Name="InsertOrUpdateRecruitmentCastMasterResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateRecruitmentCityMaster" Method="InsertOrUpdateRecruitmentCityMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="IsVisible" Parameter="isVisible" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(500)" />
+    <ElementType Name="InsertOrUpdateRecruitmentCityMasterResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateRecruitmentRelationMaster" Method="InsertOrUpdateRecruitmentRelationMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="IsVisible" Parameter="isVisible" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(500)" />
+    <ElementType Name="InsertOrUpdateRecruitmentRelationMasterResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateRecruitmentReligiontMaster" Method="InsertOrUpdateRecruitmentReligiontMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="IsVisible" Parameter="isVisible" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(500)" />
+    <ElementType Name="InsertOrUpdateRecruitmentReligiontMasterResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.RemoveRecruitmentAdvertisementMaster" Method="RemoveRecruitmentAdvertisementMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveRecruitmentAdvertisementMasterDetails" Method="RemoveRecruitmentAdvertisementMasterDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveRecruitmentCastMaster" Method="RemoveRecruitmentCastMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveRecruitmentCityMaster" Method="RemoveRecruitmentCityMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveRecruitmentEducationMaster" Method="RemoveRecruitmentEducationMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveRecruitmentRelationMaster" Method="RemoveRecruitmentRelationMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveRecruitmentReligiontMaster" Method="RemoveRecruitmentReligiontMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetAllRecruitmentEducationMaster" Method="GetAllRecruitmentEducationMaster">
+    <ElementType Name="GetAllRecruitmentEducationMasterResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="EducationDetailName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EducationType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetRecruitmentEducationMasterById" Method="GetRecruitmentEducationMasterById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetRecruitmentEducationMasterByIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="EducationDetailName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EducationType" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateRecruitmentEducationMaster" Method="InsertOrUpdateRecruitmentEducationMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EducationDetailName" Parameter="educationDetailName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="EducationType" Parameter="educationType" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IsVisible" Parameter="isVisible" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(500)" />
+    <ElementType Name="InsertOrUpdateRecruitmentEducationMasterResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertRecruitmentAdvertisementMasterDetails" Method="InsertRecruitmentAdvertisementMasterDetails">
+    <Parameter Name="AdvertisementId" Parameter="advertisementId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="QualificationId" Parameter="qualificationId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="InsertRecruitmentAdvertisementMasterDetailsResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetRecruitmentAdvertisementMasterDetailsByAddId" Method="GetRecruitmentAdvertisementMasterDetailsByAddId">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetRecruitmentAdvertisementMasterDetailsByAddIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AdvertisementId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="QualificationId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateDistrictDetails" Method="InsertOrUpdateDistrictDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="StateId" Parameter="stateId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="DistrictName" Parameter="districtName" Type="System.String" DbType="VarChar(500)" />
+    <Parameter Name="CreatedBy" Parameter="createdBy" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="ModifyBy" Parameter="modifyBy" Type="System.String" DbType="VarChar(50)" />
+    <Parameter Name="IsDelete" Parameter="isDelete" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Ip" Parameter="ip" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="InsertOrUpdateDistrictDetailsResult">
+      <Column Name="DisId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllState" Method="GetAllState">
+    <ElementType Name="GetAllStateResult">
+      <Column Name="RecId" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Statename" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetDistrictDetailsByAddId" Method="GetDistrictDetailsByAddId">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetDistrictDetailsByAddIdResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DistrictName" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="StateId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllDistrict" Method="GetAllDistrict">
+    <ElementType Name="GetAllDistrictResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DistrictName" Type="System.String" DbType="VarChar(500)" CanBeNull="true" />
+      <Column Name="Statename" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="StateId" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.RemoveRecruitmentDistrict" Method="RemoveRecruitmentDistrict">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetStateDetailsByAddId" Method="GetStateDetailsByAddId">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetStateDetailsByAddIdResult">
+      <Column Name="Recid" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Statename" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateStateMaster" Method="InsertOrUpdateStateMaster">
+    <Parameter Name="RecId" Parameter="recId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="StateName" Parameter="stateName" Type="System.String" DbType="NVarChar(50)" />
+    <ElementType Name="InsertOrUpdateStateMasterResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetRecruitmentAdvertisementMasterById" Method="GetRecruitmentAdvertisementMasterById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetRecruitmentAdvertisementMasterByIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AdvertisementName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AdvertisementDesc" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PostCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AdvertisementCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PostType" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RecrutmentType" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FileName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ToAge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="IsDelete" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllAdvertisementTypeMasterDetails" Method="GetAllAdvertisementTypeMasterDetails">
+    <ElementType Name="GetAllAdvertisementTypeMasterDetailsResult">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AdvertisementType" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateRecruitmentAdvertisementMaster" Method="InsertOrUpdateRecruitmentAdvertisementMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="AdvertisementName" Parameter="advertisementName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AdvertisementDesc" Parameter="advertisementDesc" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="PostCode" Parameter="postCode" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AdvertisementCode" Parameter="advertisementCode" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="PostType" Parameter="postType" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="RecrutmentType" Parameter="recrutmentType" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="FileName" Parameter="fileName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AgeLimitCalOn" Parameter="ageLimitCalOn" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="PublishDate" Parameter="publishDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="MinExperiance" Parameter="minExperiance" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ToAge" Parameter="toAge" Type="System.Int32" DbType="Int" />
+    <Parameter Name="StartDate" Parameter="startDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="EndDate" Parameter="endDate" Type="System.DateTime" DbType="DateTime" />
+    <Parameter Name="AdvertisementType" Parameter="advertisementType" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="Designation" Parameter="designation" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Noopening" Parameter="noopening" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="MaxExperiance" Parameter="maxExperiance" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Gender" Parameter="gender" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="InterviewDate" Parameter="interviewDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="InterviewTime" Parameter="interviewTime" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="ReportingTime" Parameter="reportingTime" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="IsNewIcon" Parameter="isNewIcon" Type="System.Int32" DbType="Int" />
+    <ElementType Name="InsertOrUpdateRecruitmentAdvertisementMasterResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllRecruitmentAdvertisementMaster" Method="GetAllRecruitmentAdvertisementMaster">
+    <ElementType Name="GetAllRecruitmentAdvertisementMasterResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AdvertisementName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AdvertisementDesc" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PostCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AdvertisementCode" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PostType" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="RecrutmentType" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FileName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AgeLimitCalOn" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="MinExperiance" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ToAge" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="StartDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="EndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="AdvertisementType" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="Designation" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Noopening" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="MaxExperiance" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Gender" Type="System.String" DbType="NVarChar(500)" CanBeNull="true" />
+      <Column Name="PublishDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="InterviewDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="InterviewTime" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="ReportingTime" Type="System.String" DbType="NVarChar(500) NOT NULL" CanBeNull="false" />
+      <Column Name="IsNewIcon" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

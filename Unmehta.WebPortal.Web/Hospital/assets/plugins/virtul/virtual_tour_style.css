@@ -1,0 +1,126 @@
+
+
+#panorama,
+#panorama body {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+#panorama,
+canvas {
+    margin: auto;
+}
+#audio,
+#fullscreen,
+.top_buttons {
+    border-radius: 30px;
+}
+#audio,
+#fullscreen,
+#zoom_in,
+#zoom_out,
+.audio_player,
+.control_keys,
+.keys > i,
+i.keys {
+    cursor: pointer;
+}
+
+.keys,
+.top_buttons,
+.zoom_conrol {
+    font-size: 32px;
+    color: #fff;
+    position: absolute;
+}
+#panorama {
+    cursor: move;
+    cursor: grab;
+    cursor: -moz-grab;
+    cursor: -webkit-grab;
+}
+#panorama:active {
+    cursor: grabbing;
+    cursor: -moz-grabbing;
+    cursor: -webkit-grabbing;
+}
+#panoramaImage {
+    display: none;
+}
+.top_buttons {
+    right: 26px;
+    top: 26px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 11px 1px 10px 6px;
+    width: 99px;
+}
+#fullscreen {
+    padding: 5px 20px 2px 9px;
+    float: right;
+}
+#audio {
+    padding: 5px 9px 2px;
+    opacity: 0.9;
+}
+.zoom_conrol {
+    right: 19px;
+    bottom: 165px;
+}
+.zoom {
+    width: 32px;
+    padding: 3px;
+}
+.keys {
+    right: 26px;
+    bottom: 26px;
+    background: rgba(0, 0, 0, 0.4);
+    padding: 56px 14px 14px;
+    border-radius: 15px;
+    width: 100px;
+    height: 152px;
+}
+.key-icon {
+    margin: 5px 14px;
+}
+.key_down {
+    margin-left: -6px;
+}
+img#right_key {
+    left: 35px;
+}
+img#left_key {
+    right: 6px;
+}
+img#up_key {
+    bottom: 5px;
+}
+img#down_key {
+    bottom: -64px;
+}
+img#elipse_key {
+    left: 4px;
+    bottom: -25px;
+}
+.control-key {
+    position: absolute;
+    right: 76px;
+    bottom: 103px;
+}
+.control_keys {
+    position: absolute;
+}
+#audio_player {
+    float: left;
+    margin-left: 17px;
+}
+#fullScreenMode {
+    cursor: pointer;
+    position: absolute;
+    right: 27px;
+    top: 26px;
+    padding: 18px 16px 6px 15px;
+    border-radius: 10px 27px 27px 10px;
+    z-index: 15;
+    background: rgba(0, 0, 0, 0.2);
+}

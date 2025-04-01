@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="UnitMasterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.21,1433;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString1" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GetAllUnitMaster" Method="GetAllUnitMaster">
+    <ElementType Name="GetAllUnitMasterResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="UnitName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SpecilizationId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="SpecilizationName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="WeekNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WeekName" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="StartTime" Type="System.String" DbType="NVarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="EndTime" Type="System.String" DbType="NVarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="StartTimeHour" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="StartTimeMin" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="StartTimeTT" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="EndTimeHour" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="EndTimeMin" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="EndTimeTT" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateUnitMaster" Method="InsertOrUpdateUnitMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="SpecilizationId" Parameter="specilizationId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LangId" Parameter="langId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UnitName" Parameter="unitName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="WeekNo" Parameter="weekNo" Type="System.Int32" DbType="Int" />
+    <Parameter Name="StartTimeHour" Parameter="startTimeHour" Type="System.String" DbType="NVarChar(2)" />
+    <Parameter Name="StartTimeMin" Parameter="startTimeMin" Type="System.String" DbType="NVarChar(2)" />
+    <Parameter Name="StartTimeTT" Parameter="startTimeTT" Type="System.String" DbType="NVarChar(2)" />
+    <Parameter Name="EndTimeHour" Parameter="endTimeHour" Type="System.String" DbType="NVarChar(2)" />
+    <Parameter Name="EndTimeMin" Parameter="endTimeMin" Type="System.String" DbType="NVarChar(2)" />
+    <Parameter Name="EndTimeTT" Parameter="endTimeTT" Type="System.String" DbType="NVarChar(2)" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="InsertOrUpdateUnitMasterResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.RemoveUnitMaster" Method="RemoveUnitMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetUnitMasterByIdAndLangId" Method="GetUnitMasterByIdAndLangId">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LangId" Parameter="langId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetUnitMasterByIdAndLangIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="UnitName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SpecilizationId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="SpecilizationName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="WeekNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="WeekName" Type="System.String" DbType="VarChar(9)" CanBeNull="true" />
+      <Column Name="StartTime" Type="System.String" DbType="NVarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="EndTime" Type="System.String" DbType="NVarChar(8) NOT NULL" CanBeNull="false" />
+      <Column Name="StartTimeHour" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="StartTimeMin" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="StartTimeTT" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="EndTimeHour" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="EndTimeMin" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="EndTimeTT" Type="System.String" DbType="NVarChar(2)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllUnitDoctorMasterById" Method="GetAllUnitDoctorMasterById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LangId" Parameter="langId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllUnitDoctorMasterByIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="UnitId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="LangId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="UnitDetailId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="DoctorId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="DoctorName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertUnitDoctorMaster" Method="InsertUnitDoctorMaster">
+    <Parameter Name="UnitDetailId" Parameter="unitDetailId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LangId" Parameter="langId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UnitId" Parameter="unitId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="DocId" Parameter="docId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="InsertUnitDoctorMasterResult">
+      <Column Name="RecId" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.RemoveUnitDoctorMaster" Method="RemoveUnitDoctorMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="GoverningBoardMasterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.2;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString2" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.RemoveGoverningBoardMasterDesignationDetail" Method="RemoveGoverningBoardMasterDesignationDetail">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertOrUpdateGoverningBoardMaster" Method="InsertOrUpdateGoverningBoardMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="MetaTitle" Parameter="metaTitle" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="MetaDescription" Parameter="metaDescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Description" Parameter="description" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(100)" />
+    <ElementType Name="InsertOrUpdateGoverningBoardMasterResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllGoverningBoardMaster" Method="GetAllGoverningBoardMaster">
+    <Parameter Name="LangId" Parameter="langId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllGoverningBoardMasterResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="PageDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MetaTitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MetaDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllByGoverningBoardMasterDesignationDetailByLangIdAndGovBoardId" Method="GetAllByGoverningBoardMasterDesignationDetailByLangIdAndGovBoardId">
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="GovBoardId" Parameter="govBoardId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllByGoverningBoardMasterDesignationDetailByLangIdAndGovBoardIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DesignatedPersonName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DesignationId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="DesignationName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FilePath" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="FullPath" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+      <Column Name="SequanceNo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateGoverningBoardMasterDesignationDetail" Method="InsertOrUpdateGoverningBoardMasterDesignationDetail">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="GovBoardId" Parameter="govBoardId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="DesignatedPersonName" Parameter="designatedPersonName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="FilePath" Parameter="filePath" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="DesignationId" Parameter="designationId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="DesignationDescription" Parameter="designationDescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="SequanceNo" Parameter="sequanceNo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="InsertOrUpdateGoverningBoardMasterDesignationDetailResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

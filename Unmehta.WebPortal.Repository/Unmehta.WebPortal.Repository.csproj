@@ -1,0 +1,230 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D869D0FD-A876-47EE-A743-B51C892CFF10}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Unmehta.WebPortal.Repository</RootNamespace>
+    <AssemblyName>Unmehta.WebPortal.Repository</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.7.2.0, Culture=neutral, PublicKeyToken=8fb06cb64d019a17, processorArchitecture=MSIL">
+      <HintPath>..\packages\DocumentFormat.OpenXml.2.7.2\lib\net40\DocumentFormat.OpenXml.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ExcelNumberFormat, Version=1.0.10.0, Culture=neutral, PublicKeyToken=23c6f5d73be07eca, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelNumberFormat.1.0.10\lib\net20\ExcelNumberFormat.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interface\Candidate\ICandidateDetailsRepository.cs" />
+    <Compile Include="Interface\CMS\IHolidayMasterRepository.cs" />
+    <Compile Include="Interface\CMS\INewsLetterMasterRepository.cs" />
+    <Compile Include="Interface\CMS\IPackageTypetRepository.cs" />
+    <Compile Include="Interface\Faculty\IDepartmentRepository.cs" />
+    <Compile Include="Interface\Faculty\IDesignationRepository.cs" />
+    <Compile Include="Interface\Faculty\IFacultyRepository.cs" />
+    <Compile Include="Interface\Faculty\IOpdUnitRepository.cs" />
+    <Compile Include="Interface\FrontEnd\IHomePageRepository.cs" />
+    <Compile Include="Interface\Hospital\IAboutNursingCareMasterRepository.cs" />
+    <Compile Include="Interface\Hospital\IAboutUsMasterRepository.cs" />
+    <Compile Include="Interface\Hospital\IAcademicMedicalRepository.cs" />
+    <Compile Include="Interface\Hospital\IBannerSubDetailsRepository.cs" />
+    <Compile Include="Interface\Hospital\IBlogCategoryMasterRepository.cs" />
+    <Compile Include="Interface\Hospital\ICareerMasterRepository.cs" />
+    <Compile Include="Interface\Hospital\IComplaintEnquiryRepository.cs" />
+    <Compile Include="Interface\Hospital\IDepartmentTabRepository.cs" />
+    <Compile Include="Interface\Hospital\IDoctorPublicationsMasterDetailsRepository.cs" />
+    <Compile Include="Interface\Hospital\IDoctorAchievementsMasterDetailsRepository.cs" />
+    <Compile Include="Interface\Hospital\IDoctorMasterRepository.cs" />
+    <Compile Include="Interface\Hospital\IDoctorExpertiseMasterDetailsRepository.cs" />
+    <Compile Include="Interface\Hospital\IDoctorQualificationMasterDetailsRepository.cs" />
+    <Compile Include="Interface\Hospital\IDoctorSpecializationMasterDetailsRepository.cs" />
+    <Compile Include="Interface\Hospital\IEquipmentMasterRepository.cs" />
+    <Compile Include="Interface\Hospital\IFacilitesMasterRepository.cs" />
+    <Compile Include="Interface\Hospital\IFooterQuickLinkRepository.cs" />
+    <Compile Include="Interface\Hospital\IFrontAppointmentRepository.cs" />
+    <Compile Include="Interface\Hospital\IGlobalSearchMasterRepository.cs" />
+    <Compile Include="Interface\Hospital\IGoverningBoardMasterRepository.cs" />
+    <Compile Include="Interface\Hospital\IHistoryRepository.cs" />
+    <Compile Include="Interface\Hospital\IOtherFacilitiesRepository.cs" />
+    <Compile Include="Interface\Hospital\IOtpMobileRepository.cs" />
+    <Compile Include="Interface\Hospital\IOurExcellenceMasterFacilityRepositry.cs" />
+    <Compile Include="Interface\Hospital\IOurExcellenceMasterFacultyRepositry.cs" />
+    <Compile Include="Interface\Hospital\IOurExcellenceMasterRepository.cs" />
+    <Compile Include="Interface\Hospital\IOurExcellenceMasterStatisticsRepositry.cs" />
+    <Compile Include="Interface\Hospital\IPatientFeedbacksRepository.cs" />
+    <Compile Include="Interface\Hospital\IPatientsEducationBrochureRepository.cs" />
+    <Compile Include="Interface\Hospital\IPatientTestimonialRepository.cs" />
+    <Compile Include="Interface\Hospital\IScheduleNewsLetterRepository.cs" />
+    <Compile Include="Interface\Hospital\ISpecializationRepository.cs" />
+    <Compile Include="Interface\Hospital\IStarOfRepository.cs" />
+    <Compile Include="Interface\Hospital\IStatisticsChartRepository.cs" />
+    <Compile Include="Interface\Hospital\IConfigurUnitRepository.cs" />
+    <Compile Include="Interface\Hospital\IUnitTeamRepository.cs" />
+    <Compile Include="Interface\Hospital\IAffilationRepository.cs" />
+    <Compile Include="Interface\Hospital\IUnmicrCareerRepository.cs" />
+    <Compile Include="Interface\Hospital\IVisionMissionRepository.cs" />
+    <Compile Include="Interface\IConfigDetailsRepository.cs" />
+    <Compile Include="Interface\IDailyVisitEntryRepository.cs" />
+    <Compile Include="Interface\IEventFormFieldRepository.cs" />
+    <Compile Include="Interface\IExecutiveLeadershipRepository.cs" />
+    <Compile Include="Interface\IMenuMasterRepository.cs" />
+    <Compile Include="Interface\IStateRepository.cs" />
+    <Compile Include="Interface\IStentPriceTypeRepository.cs" />
+    <Compile Include="Interface\IUserLogInRepository.cs" />
+    <Compile Include="Interface\Payment\IPaymentRepository.cs" />
+    <Compile Include="Interface\Recrutment\IDistrictRepository.cs" />
+    <Compile Include="Interface\Recrutment\IRecruitmentAdvertisementCodeMasterRepository.cs" />
+    <Compile Include="Interface\Recrutment\IRecruitmentAdvertisementRepository.cs" />
+    <Compile Include="Interface\Recrutment\IRecruitmentAdvertisementMasterDetailsRepository.cs" />
+    <Compile Include="Interface\Recrutment\IRecruitmentEducationRepository.cs" />
+    <Compile Include="Interface\Recrutment\IRecruitmentEducationTypeMasterRepository.cs" />
+    <Compile Include="Interface\Recrutment\IRecruitmentReligionRepository.cs" />
+    <Compile Include="Interface\Recrutment\IRecruitmentRelationRepository.cs" />
+    <Compile Include="Interface\Recrutment\IRecruitmentCityRepository.cs" />
+    <Compile Include="Interface\Recrutment\IRecruitmentCastRepository.cs" />
+    <Compile Include="Interface\Recrutment\IRecruitmentSourceTypeMasterRepository.cs" />
+    <Compile Include="Interface\Rights\IAdminMenuLinkMasterRepository.cs" />
+    <Compile Include="Interface\Rights\IRoleMasterRepositry.cs" />
+    <Compile Include="Interface\Rights\IUserMasterRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\Candidate\CandidateDetailsRepository.cs" />
+    <Compile Include="Repository\CMS\HolidayMasterRepository.cs" />
+    <Compile Include="Repository\CMS\NewsLetterMasterRepository.cs" />
+    <Compile Include="Repository\CMS\PackageTypeRepository.cs" />
+    <Compile Include="Repository\ConfigDetailsRepository.cs" />
+    <Compile Include="Repository\DailyVisitEntryRepository.cs" />
+    <Compile Include="Repository\ExecutiveLeadershipRepository.cs" />
+    <Compile Include="Repository\Faculty\DepartmentRepository.cs" />
+    <Compile Include="Repository\Faculty\DesignationRepository.cs" />
+    <Compile Include="Repository\Faculty\FacultyRepository.cs" />
+    <Compile Include="Repository\Faculty\OpdUnitRepository.cs" />
+    <Compile Include="Repository\FrontEnd\HomePageRepository.cs" />
+    <Compile Include="Repository\Hospital\AboutUsMasterRepository.cs" />
+    <Compile Include="Repository\Hospital\AcademicMedicalRepository.cs" />
+    <Compile Include="Repository\Hospital\BannerSubDetailsRepository.cs" />
+    <Compile Include="Repository\Hospital\BlogCategoryMasterRepository.cs" />
+    <Compile Include="Repository\Hospital\AboutNursingCareMasterRepository.cs" />
+    <Compile Include="Repository\Hospital\CareerMasterRepository.cs" />
+    <Compile Include="Repository\Hospital\ComplaintEnquiryRepository.cs" />
+    <Compile Include="Repository\Hospital\DepartmentTabRepository.cs" />
+    <Compile Include="Repository\Hospital\DoctorPublicationsMasterDetailsRepository.cs" />
+    <Compile Include="Repository\Hospital\DoctorAchievementsMasterDetailsRepository.cs" />
+    <Compile Include="Repository\Hospital\DoctorExpertiseMasterDetailsRepository.cs" />
+    <Compile Include="Repository\Hospital\DoctorQualificationMasterDetailsRepository.cs" />
+    <Compile Include="Repository\Hospital\DoctorSpecializationMasterDetailsRepository.cs" />
+    <Compile Include="Repository\Hospital\DoctorMasterRepository.cs" />
+    <Compile Include="Repository\Hospital\EquipmentMasterRepository.cs" />
+    <Compile Include="Repository\Hospital\EventFormFieldRepository.cs" />
+    <Compile Include="Repository\Hospital\FacilitesMasterRepository.cs" />
+    <Compile Include="Repository\Hospital\FooterQuickLinkRepository.cs" />
+    <Compile Include="Repository\Hospital\FrontAppointmentRepository.cs" />
+    <Compile Include="Repository\Hospital\GlobalSearchMasterRepository.cs" />
+    <Compile Include="Repository\Hospital\GoverningBoardMasterRepository.cs" />
+    <Compile Include="Repository\Hospital\HistoryRepository.cs" />
+    <Compile Include="Repository\Hospital\HospitalAppointmentRepository.cs" />
+    <Compile Include="Interface\Hospital\IHospitalAppointmentRepository.cs" />
+    <Compile Include="Repository\Hospital\ICUOnWheelRepository.cs" />
+    <Compile Include="Repository\Hospital\OtherFacilitiesRepository.cs" />
+    <Compile Include="Repository\Hospital\OtpMobileRepository.cs" />
+    <Compile Include="Repository\Hospital\OurExcellenceMasterFacilityRepositry.cs" />
+    <Compile Include="Repository\Hospital\OurExcellenceMasterFacultyRepositry.cs" />
+    <Compile Include="Repository\Hospital\OurExcellenceMasterRepository.cs" />
+    <Compile Include="Repository\Hospital\OurExcellenceMasterStatisticsRepositry.cs" />
+    <Compile Include="Repository\Hospital\PatientFeedbacksRepository.cs" />
+    <Compile Include="Repository\Hospital\PatientsEducationBrochureRepository.cs" />
+    <Compile Include="Repository\Hospital\PatientTestimonialRepository.cs" />
+    <Compile Include="Repository\Hospital\ScheduleNewsLetterRepository.cs" />
+    <Compile Include="Repository\Hospital\SpecializationRepository.cs" />
+    <Compile Include="Repository\Hospital\StarOfRepository.cs" />
+    <Compile Include="Repository\Hospital\StatisticsChartRepository.cs" />
+    <Compile Include="Repository\Hospital\StentPriceTypeRepository.cs" />
+    <Compile Include="Repository\Hospital\ConfigurUnitRepository.cs" />
+    <Compile Include="Repository\Hospital\UnitTeamRepository.cs" />
+    <Compile Include="Repository\Hospital\AffilationRepository.cs" />
+    <Compile Include="Repository\Hospital\UnmicrCareerRepository.cs" />
+    <Compile Include="Repository\Hospital\VisionMissionRepository.cs" />
+    <Compile Include="Repository\MenuMasterRepository.cs" />
+    <Compile Include="Repository\Payment\PaymentRepository.cs" />
+    <Compile Include="Repository\Recrutment\DistrictRepository.cs" />
+    <Compile Include="Repository\Recrutment\RecruitmentAdvertisementCodeMasterRepository.cs" />
+    <Compile Include="Repository\Recrutment\RecruitmentAdvertisementRepository.cs" />
+    <Compile Include="Repository\Recrutment\RecruitmentAdvertisementMasterDetailsRepository.cs" />
+    <Compile Include="Repository\Recrutment\RecruitmentEducationRepository.cs" />
+    <Compile Include="Repository\Recrutment\RecruitmentEducationTypeMasterRepository.cs" />
+    <Compile Include="Repository\Recrutment\RecruitmentReligionRepository.cs" />
+    <Compile Include="Repository\Recrutment\RecruitmentRelationRepository.cs" />
+    <Compile Include="Repository\Recrutment\RecruitmentCityRepository.cs" />
+    <Compile Include="Repository\Recrutment\RecruitmentCastRepository.cs" />
+    <Compile Include="Repository\Recrutment\RecruitmentSourceTypeMasterRepository.cs" />
+    <Compile Include="Repository\Rights\AdminMenuLinkMasterRepository.cs" />
+    <Compile Include="Repository\Rights\ChatBotRepository.cs" />
+    <Compile Include="Repository\Rights\RoleMasterRepositry.cs" />
+    <Compile Include="Repository\Rights\UserMasterRepositry.cs" />
+    <Compile Include="Repository\StateRepository.cs" />
+    <Compile Include="Repository\UserLogInRepository.cs" />
+    <Compile Include="Session\SessionWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BO\BO.csproj">
+      <Project>{CA8AAF8F-1DFD-410A-AFD0-91680CF9174F}</Project>
+      <Name>BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unmehta.WebPortal.Data\Unmehta.WebPortal.Data.csproj">
+      <Project>{2556b19b-4292-4e71-a7b0-833b60efc079}</Project>
+      <Name>Unmehta.WebPortal.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Unmehta.WebPortal.Model\Unmehta.WebPortal.Model.csproj">
+      <Project>{9C2D9D14-EC02-4C47-A4B4-1E33CF75D509}</Project>
+      <Name>Unmehta.WebPortal.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

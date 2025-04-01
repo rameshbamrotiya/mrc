@@ -1,0 +1,180 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="DoctorMasterWithDetailsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.21,1433;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GetAllDoctorAchivementsMasterDetailsByDocId" Method="GetAllDoctorAchivementsMasterDetailsByDocId">
+    <Parameter Name="DocId" Parameter="docId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllDoctorAchivementsMasterDetailsByDocIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DocId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="AchievementsName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllDoctorSpecializationMasterDetailsByDocId" Method="GetAllDoctorSpecializationMasterDetailsByDocId">
+    <Parameter Name="DocId" Parameter="docId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllDoctorSpecializationMasterDetailsByDocIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="SpecializationId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="SpecializationName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllDoctorExpertiseMasterDetailsByDocId" Method="GetAllDoctorExpertiseMasterDetailsByDocId">
+    <Parameter Name="DocId" Parameter="docId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllDoctorExpertiseMasterDetailsByDocIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DocId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ExpertiseName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllDoctorPublicationsMasterDetailsByDocId" Method="GetAllDoctorPublicationsMasterDetailsByDocId">
+    <Parameter Name="DocId" Parameter="docId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllDoctorPublicationsMasterDetailsByDocIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DocId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="Publications" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllDoctorQualificationMasterDetailsByDocId" Method="GetAllDoctorQualificationMasterDetailsByDocId">
+    <Parameter Name="DocId" Parameter="docId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllDoctorQualificationMasterDetailsByDocIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DocId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="QualificationName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="QualificationShortName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateDoctorAchivementsMasterDetails" Method="InsertOrUpdateDoctorAchivementsMasterDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="DocId" Parameter="docId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="AchievementsName" Parameter="achievementsName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="InsertOrUpdateDoctorAchivementsMasterDetailsResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateDoctorExpertiseMasterDetails" Method="InsertOrUpdateDoctorExpertiseMasterDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="DocId" Parameter="docId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ExpertiseName" Parameter="expertiseName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="InsertOrUpdateDoctorExpertiseMasterDetailsResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateDoctorPublicationsMasterDetails" Method="InsertOrUpdateDoctorPublicationsMasterDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="DocId" Parameter="docId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="PublicationsName" Parameter="publicationsName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="InsertOrUpdateDoctorPublicationsMasterDetailsResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateDoctorQualificationMasterDetails" Method="InsertOrUpdateDoctorQualificationMasterDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="DocId" Parameter="docId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="QualificationName" Parameter="qualificationName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="QualificationShortName" Parameter="qualificationShortName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="InsertOrUpdateDoctorQualificationMasterDetailsResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateDoctorSpecializationMasterDetails" Method="InsertOrUpdateDoctorSpecializationMasterDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="DocId" Parameter="docId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="SpecializationId" Parameter="specializationId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="InsertOrUpdateDoctorSpecializationMasterDetailsResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateEducationQualificationMaster" Method="InsertOrUpdateEducationQualificationMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EduQualificationName" Parameter="eduQualificationName" Type="System.String" DbType="NVarChar(500)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(500)" />
+    <ElementType Name="InsertOrUpdateEducationQualificationMasterResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.RemoveDoctorQualificationMasterDetails" Method="RemoveDoctorQualificationMasterDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveDoctorPublicationsMasterDetails" Method="RemoveDoctorPublicationsMasterDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveDoctorMaster" Method="RemoveDoctorMaster">
+    <Parameter Name="DocId" Parameter="docId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveDoctorExpertiseMasterDetails" Method="RemoveDoctorExpertiseMasterDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveDoctorAchivementsMasterDetails" Method="RemoveDoctorAchivementsMasterDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveDoctorSpecializationMaster" Method="RemoveDoctorSpecializationMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetAllDoctorByLanguageId" Method="GetAllDoctorByLanguageId">
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllDoctorByLanguageIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllDoctorMaster" Method="GetAllDoctorMaster">
+    <ElementType Name="GetAllDoctorMasterResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DoctorFirstName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DoctorMiddleName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DoctorLastName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DoctorShotDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DoctorDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DoctorProfilePic" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SequanceNo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateDoctorMaster" Method="InsertOrUpdateDoctorMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="SequanceNo" Parameter="sequanceNo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="DoctorFirstName" Parameter="doctorFirstName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="DoctorMiddleName" Parameter="doctorMiddleName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="DoctorLastName" Parameter="doctorLastName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="DoctorDescription" Parameter="doctorDescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="DoctorShotDescription" Parameter="doctorShotDescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="DoctorProfilePic" Parameter="doctorProfilePic" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="InsertOrUpdateDoctorMasterResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetDoctorMasterByDocIdAndLangId" Method="GetDoctorMasterByDocIdAndLangId">
+    <Parameter Name="DocId" Parameter="docId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LanId" Parameter="lanId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetDoctorMasterByDocIdAndLangIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DoctorFirstName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DoctorMiddleName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DoctorLastName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DoctorShotDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DoctorDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DoctorProfilePic" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SequanceNo" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="IsActive" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

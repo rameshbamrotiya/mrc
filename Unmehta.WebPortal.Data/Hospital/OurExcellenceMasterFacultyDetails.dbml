@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="OurExcellenceMasterFacultyDetailsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.21,1433;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString1" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GetAllOurExcellenceMasterFacultyDetails" Method="GetAllOurExcellenceMasterFacultyDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllOurExcellenceMasterFacultyDetailsResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="OurExcId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="FacultyId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="FacultyName" Type="System.String" DbType="VarChar(1) NOT NULL" CanBeNull="false" />
+      <Column Name="SequenceNo" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateOurExcellenceMasterFacultyDetails" Method="InsertOrUpdateOurExcellenceMasterFacultyDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="OurExcId" Parameter="ourExcId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="FacultyId" Parameter="facultyId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="SequenceNo" Parameter="sequenceNo" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="InsertOrUpdateOurExcellenceMasterFacultyDetailsResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.RemoveOurExcellenceMasterFacultyDetails" Method="RemoveOurExcellenceMasterFacultyDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

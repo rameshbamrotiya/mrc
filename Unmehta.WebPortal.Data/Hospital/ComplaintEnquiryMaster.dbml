@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="ComplaintEnquiryMasterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.21,1433;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString1" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.RemoveComplaintEnquiryMaster" Method="RemoveComplaintEnquiryMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetAllComplaintEnquiryMaster" Method="GetAllComplaintEnquiryMaster">
+    <Parameter Name="IsEnquiry" Parameter="isEnquiry" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="GetAllComplaintEnquiryMasterResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="FullName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="EmailId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MobileNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CountryId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="StateId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="CityId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateComplaintEnquiryMaster" Method="InsertOrUpdateComplaintEnquiryMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="FullName" Parameter="fullName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="EmailId" Parameter="emailId" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="MobileNo" Parameter="mobileNo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="CountryId" Parameter="countryId" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="StateId" Parameter="stateId" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="CityId" Parameter="cityId" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Message" Parameter="message" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsEnquiry" Parameter="isEnquiry" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

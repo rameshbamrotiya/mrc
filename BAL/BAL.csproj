@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4C4A1C7F-C64F-40DF-9B32-7CDCEF4216D6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BAL</RootNamespace>
+    <AssemblyName>BAL</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdmissionPageDetailsBAL.cs" />
+    <Compile Include="Admission\StudentEducationDocumentBAL.cs" />
+    <Compile Include="AllocateSeatBAL.cs" />
+    <Compile Include="AcademicsDescriptionMasterBAL.cs" />
+    <Compile Include="AlumniStudentMasterBAL.cs" />
+    <Compile Include="ConfigUnitBAL.cs" />
+    <Compile Include="ConfigUnitDoctorDetailMasterBAL.cs" />
+    <Compile Include="ConfigUnitSlotDetailMasterBAL.cs" />
+    <Compile Include="GeneralinstructionBAL.cs" />
+    <Compile Include="HomePagePopupMasterBAL.cs" />
+    <Compile Include="ClinicalMaterialMasterBAL.cs" />
+    <Compile Include="PaymentBAL.cs" />
+    <Compile Include="SendSubscribeNewsletterBAL.cs" />
+    <Compile Include="SMSLogBAL.cs" />
+    <Compile Include="StudentReportBAL.cs" />
+    <Compile Include="SubscribeNewsletterMasterBAL.cs" />
+    <Compile Include="MedicalTourismBAL.cs" />
+    <Compile Include="CovidCareMasterBAL.cs" />
+    <Compile Include="OnlineEventRegistrtionBAL.cs" />
+    <Compile Include="FAQMasterBAL.cs" />
+    <Compile Include="ContactUsMasterBAL.cs" />
+    <Compile Include="FacilityInECMSDetailsBAL.cs" />
+    <Compile Include="FloorMasterBAL.cs" />
+    <Compile Include="CallUsMasterBAL.cs" />
+    <Compile Include="MedicalTourismAccordionMasterBAL.cs" />
+    <Compile Include="NursingCareAccordionTypeMasterBAL.cs" />
+    <Compile Include="PatientCareMasterBAL.cs" />
+    <Compile Include="CallUsTypeMasterBAL.cs" />
+    <Compile Include="CareerBAL.cs" />
+    <Compile Include="ContactUsBAL.cs" />
+    <Compile Include="ContributionMasterBAL.cs" />
+    <Compile Include="EMCSBAL.cs" />
+    <Compile Include="EventMasterBAL.cs" />
+    <Compile Include="EventTypeBAL.cs" />
+    <Compile Include="FeedbackBAL.cs" />
+    <Compile Include="ExtraDetailsBAL.cs" />
+    <Compile Include="HomePageContentBAL.cs" />
+    <Compile Include="NursingCareBAL.cs" />
+    <Compile Include="HealthTipsMasterBAL.cs" />
+    <Compile Include="OPDTimingsBAL.cs" />
+    <Compile Include="PatientFeedbackContentDetailsBAL.cs" />
+    <Compile Include="PrivacyPolicyMasterBAL.cs" />
+    <Compile Include="StudentCastMasterBAL.cs" />
+    <Compile Include="StudentFamilyDetailsBAL.cs" />
+    <Compile Include="StudentGenerateMeritNumberBAL.cs" />
+    <Compile Include="StudentRegistrationDetailsBAL.cs" />
+    <Compile Include="AcademicDetailsBAL.cs" />
+    <Compile Include="AccommodationBAL.cs" />
+    <Compile Include="AccredationMasterBAL.cs" />
+    <Compile Include="ActiveTenderBAL.cs" />
+    <Compile Include="Admission\StudentAdvertisementBAL.cs" />
+    <Compile Include="Admission\StudentEducationQualificationBAL.cs" />
+    <Compile Include="Admission\StudentCourseBAL.cs" />
+    <Compile Include="Admission\StudentRegistrationBAL.cs" />
+    <Compile Include="AdvertisementSourceMasterBAL.cs" />
+    <Compile Include="AdvertisementTypeMasterBAL.cs" />
+    <Compile Include="ArticleDepartmentBAL.cs" />
+    <Compile Include="ArticlesMasterBAL.cs" />
+    <Compile Include="ArticleTypeMasterBAL.cs" />
+    <Compile Include="AwardsBAL.cs" />
+    <Compile Include="BannerMasterBAL.cs" />
+    <Compile Include="BlockBAL.cs" />
+    <Compile Include="CareerMasterBAL.cs" />
+    <Compile Include="CategoryBAL.cs" />
+    <Compile Include="ChairManMessageBAL.cs" />
+    <Compile Include="CityBAL.cs" />
+    <Compile Include="CommitteeMasterBAL.cs" />
+    <Compile Include="CountryBAL.cs" />
+    <Compile Include="CourseMasterBAL.cs" />
+    <Compile Include="DirectorMessageBAL.cs" />
+    <Compile Include="DocumentUploadMasterBAL.cs" />
+    <Compile Include="EquipmentMasterBAL.cs" />
+    <Compile Include="ExtraInfoforAdmissionBAL.cs" />
+    <Compile Include="FeestypeBAL.cs" />
+    <Compile Include="FloorDirectoryBAL.cs" />
+    <Compile Include="FutureVisionBAL.cs" />
+    <Compile Include="GovApprovelBAL.cs" />
+    <Compile Include="GovBodyMasterBAL.cs" />
+    <Compile Include="HealthCareFAQBAL.cs" />
+    <Compile Include="LanguageMasterBAL.cs" />
+    <Compile Include="MenuBAL.cs" />
+    <Compile Include="MSRClauseBAL.cs" />
+    <Compile Include="NewsMasterBAL.cs" />
+    <Compile Include="OfflineDonationBAL.cs" />
+    <Compile Include="PackageMasterBAL.cs" />
+    <Compile Include="ParaMedicalBAL.cs" />
+    <Compile Include="PatientCareCategoryBAL.cs" />
+    <Compile Include="PatinetCareSubCategoryBAL.cs" />
+    <Compile Include="PhotoGalleryMasterBAL.cs" />
+    <Compile Include="PopUpMasterBAL.cs" />
+    <Compile Include="PostApplicationMasterBAL.cs" />
+    <Compile Include="PostTypeMasterBAL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicationMasterBAL.cs" />
+    <Compile Include="RecruitmentLanguageMasterBAL.cs" />
+    <Compile Include="RecruitmentTypeMasterBAL.cs" />
+    <Compile Include="RighttoInformationMasterBAL.cs" />
+    <Compile Include="SchemeBAL.cs" />
+    <Compile Include="SpecialityMasterBAL.cs" />
+    <Compile Include="StarOfTheWeekBAL.cs" />
+    <Compile Include="StateBAL.cs" />
+    <Compile Include="StudentAcademicsBAL.cs" />
+    <Compile Include="StudentReligionMasterBAL.cs" />
+    <Compile Include="SubServiceMasterBAL.cs" />
+    <Compile Include="SupportServiceMasterBAL.cs" />
+    <Compile Include="TalukaBAL.cs" />
+    <Compile Include="TCBAL.cs" />
+    <Compile Include="TemplateMasterBAL.cs" />
+    <Compile Include="TenderMasterBAL.cs" />
+    <Compile Include="VideocategoryBAL.cs" />
+    <Compile Include="VideoGalleryMasterBAL.cs" />
+    <Compile Include="UserRightsBAL.cs" />
+    <Compile Include="VisitorsMasterBAL.cs" />
+    <Compile Include="WetreatBAL.cs" />
+    <Compile Include="WriteToUNMICRCBAL.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BO\BO.csproj">
+      <Project>{CA8AAF8F-1DFD-410A-AFD0-91680CF9174F}</Project>
+      <Name>BO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DAL\DAL.csproj">
+      <Project>{C1EDF218-BE27-417D-9FFD-6AC5151F9C08}</Project>
+      <Name>DAL</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

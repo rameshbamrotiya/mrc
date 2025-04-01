@@ -1,0 +1,88 @@
+﻿using NLog;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Web.Data.Comman.Static;
+
+namespace System.Web.Data.Comman.Static
+{
+    public enum LogErrorFIle
+    {
+        ErrorLog
+    }
+    public enum LogType
+    {
+        Trace = 1,
+        Debug = 2,
+        Info = 3,
+        Warn = 4,
+        Error = 5,
+        Fatal = 6
+    }
+
+    public class NLogger : IDisposable
+    {
+        Logger logger;
+
+        public NLogger()
+        {
+            logger = LogManager.GetCurrentClassLogger();
+        }
+        public NLogger(LogErrorFIle fileName)
+        {
+            logger = LogManager.GetLogger(fileName.ToString());
+        }
+
+
+
+        public void Log(string message, LogType type)
+        {
+            switch (type)
+            {
+                case LogType.Trace:
+                    logger.Trace(message);
+                    break;
+                case LogType.Debug:
+                    logger.Debug(message);
+                    break;
+                case LogType.Info:
+                    logger.Info(message);
+                    break;
+                case LogType.Warn:
+                    logger.Warn(message);
+                    break;
+                case LogType.Error:
+                    logger.Error(message);
+                    break;
+                case LogType.Fatal:
+                    logger.Fatal(message);
+                    break;
+                default:
+                    logger.Debug(message);
+                    break;
+            }
+        }
+
+        public void Dispose()
+        {
+            logger = null;
+        }
+    }
+}
+
+
+namespace UNnMehta.Appointment.SMSReminder.Comman
+{
+    public class ErrorLogger
+    {
+        public static void ERROR(string message, string stackTrace)
+        {
+            using (NLogger log = new NLogger(LogErrorFIle.ErrorLog))
+            {
+                log.Log(" Exception Web Log : " + message + " ### Trace : " + stackTrace, LogType.Info);
+            }
+        }
+    }
+}

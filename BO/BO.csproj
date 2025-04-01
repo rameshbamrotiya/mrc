@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CA8AAF8F-1DFD-410A-AFD0-91680CF9174F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BO</RootNamespace>
+    <AssemblyName>BO</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AdmissionPageDetailsBO.cs" />
+    <Compile Include="AcademicsDescriptionMaster.cs" />
+    <Compile Include="Admission\StudentEducationDocumentBO.cs" />
+    <Compile Include="AlumniStudentMasterBO.cs" />
+    <Compile Include="ConfigUnitDoctorDetailMasterBO.cs" />
+    <Compile Include="ConfigUnitMasterBO.cs" />
+    <Compile Include="ConfigUnitSlotDetailMasterBO.cs" />
+    <Compile Include="GeneralinstructionBO.cs" />
+    <Compile Include="HomePagePopupMasterBO.cs" />
+    <Compile Include="ClinicalMaterialMasterBO.cs" />
+    <Compile Include="PaymentBO.cs" />
+    <Compile Include="SendSubscribeNewsletterBO.cs" />
+    <Compile Include="SMSlogBO.cs" />
+    <Compile Include="SubscribeNewsletterMasterBO.cs" />
+    <Compile Include="MedicalTourismBO.cs" />
+    <Compile Include="CovidCareMasterBO.cs" />
+    <Compile Include="OnlineEventRegistrtionBO.cs" />
+    <Compile Include="FAQMasterBO.cs" />
+    <Compile Include="ContactUsMasterBO.cs" />
+    <Compile Include="FacilityInECMSDetailsBO.cs" />
+    <Compile Include="FloorMasterBO.cs" />
+    <Compile Include="CallUsMasterBO.cs" />
+    <Compile Include="MedicalTourismAccordionMasterBO.cs" />
+    <Compile Include="NursingCareAccordionTypeMasterBO.cs" />
+    <Compile Include="PatientCareMasterBO.cs" />
+    <Compile Include="CallUsTypeMasterBO.cs" />
+    <Compile Include="ContributionMasterBO.cs" />
+    <Compile Include="EMCSBO.cs" />
+    <Compile Include="EventMasterBO.cs" />
+    <Compile Include="EventTypeBO.cs" />
+    <Compile Include="HealthTipsMasterBO.cs" />
+    <Compile Include="FeedbackBO.cs" />
+    <Compile Include="ExtraDetailsBO.cs" />
+    <Compile Include="HomePageContentBO.cs" />
+    <Compile Include="HomePageContent_DetailsBO.cs" />
+    <Compile Include="OPDTimingsBO.cs" />
+    <Compile Include="NursingCareBO.cs" />
+    <Compile Include="PrivacyPolicyMasterBO.cs" />
+    <Compile Include="PatientFeedbackContentDetailsBO.cs" />
+    <Compile Include="StentPriceBO.cs" />
+    <Compile Include="StudentCastMasterBO.cs" />
+    <Compile Include="StudentFamilyDetailsBO.cs" />
+    <Compile Include="StudentGenerateMeritNumberBO.cs" />
+    <Compile Include="StudentRegistrationDetailsBO.cs" />
+    <Compile Include="AcademicDetailsBO.cs" />
+    <Compile Include="AccommodationBO.cs" />
+    <Compile Include="AccredationMasterBO.cs" />
+    <Compile Include="ActiveTenderBO.cs" />
+    <Compile Include="Admission\StudentEducationQualificationBO.cs" />
+    <Compile Include="Admission\StudentEducationTypeBO.cs" />
+    <Compile Include="Admission\StudentCourseBO.cs" />
+    <Compile Include="Admission\StudentAdvertisementBO.cs" />
+    <Compile Include="Admission\StudentRegistrationBO.cs" />
+    <Compile Include="AdvertisementSourceMasterBO.cs" />
+    <Compile Include="AdvertisementTypeMasterBO.cs" />
+    <Compile Include="ArticleDepartmentBO.cs" />
+    <Compile Include="ArticlesMasterBO.cs" />
+    <Compile Include="ArticleTypeMasterBO.cs" />
+    <Compile Include="AwardsBO.cs" />
+    <Compile Include="BannerMasterBO.cs" />
+    <Compile Include="BlockBO.cs" />
+    <Compile Include="CategoryBO.cs" />
+    <Compile Include="ChairManMessageBO.cs" />
+    <Compile Include="CityBO.cs" />
+    <Compile Include="CommitteeMasterBO.cs" />
+    <Compile Include="CountryBO.cs" />
+    <Compile Include="CourseMasterBO.cs" />
+    <Compile Include="DirectorMessageBO.cs" />
+    <Compile Include="DocumentUploadMasterBO.cs" />
+    <Compile Include="CareerMasterBO.cs" />
+    <Compile Include="EquipmentMasterBO.cs" />
+    <Compile Include="ExtraInfoforAdmissionBO.cs" />
+    <Compile Include="FeestypeBO.cs" />
+    <Compile Include="FloorDirectoryBO.cs" />
+    <Compile Include="FutureVisionBO.cs" />
+    <Compile Include="GovApprovelBO.cs" />
+    <Compile Include="GovBodyMasterBO.cs" />
+    <Compile Include="HealthCareFAQBO.cs" />
+    <Compile Include="LanguageMasterBO.cs" />
+    <Compile Include="MenuBO.cs" />
+    <Compile Include="MSRClauseBO.cs" />
+    <Compile Include="NewsMasterBO.cs" />
+    <Compile Include="OfflineDonationBO.cs" />
+    <Compile Include="PackageMasterBO.cs" />
+    <Compile Include="ParamedicalBO.cs" />
+    <Compile Include="PatientCareCategoryBO.cs" />
+    <Compile Include="PatientCareSubCategoryBO.cs" />
+    <Compile Include="PhotogalleryMasterBO.cs" />
+    <Compile Include="PopUpMasterBO.cs" />
+    <Compile Include="PostApplicationMasterBO.cs" />
+    <Compile Include="PostTypeMasterBO.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicationMasterBO.cs" />
+    <Compile Include="RecruitmentLanguageMasterBO.cs" />
+    <Compile Include="RecruitmentTypeMasterBO.cs" />
+    <Compile Include="RighttoInformationMasterBO.cs" />
+    <Compile Include="SchemeBO.cs" />
+    <Compile Include="SpecialityMasterBO.cs" />
+    <Compile Include="StarOfTheWeekBO.cs" />
+    <Compile Include="StateBO.cs" />
+    <Compile Include="StudentAcademicsBO.cs" />
+    <Compile Include="StudentExtraCertificationBO.cs" />
+    <Compile Include="StudentLanguageBO.cs" />
+    <Compile Include="StudentReligionMasterBO.cs" />
+    <Compile Include="SubServiceMasterBO.cs" />
+    <Compile Include="SupportServiceMasterBO.cs" />
+    <Compile Include="TalukaBO.cs" />
+    <Compile Include="TCBO.cs" />
+    <Compile Include="TemplateMasterBO.cs" />
+    <Compile Include="TenderMasterBO.cs" />
+    <Compile Include="VideocategoryBO.cs" />
+    <Compile Include="VideoGalleryMasterBO.cs" />
+    <Compile Include="UserMasterBO.cs" />
+    <Compile Include="UserRightsBO.cs" />
+    <Compile Include="VisitorsMasterBO.cs" />
+    <Compile Include="WetreatBO.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

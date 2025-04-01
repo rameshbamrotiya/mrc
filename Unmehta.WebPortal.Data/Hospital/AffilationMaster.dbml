@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="AffilationMasterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.2;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString2" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GetAllAffilationMasterImageDetailsByAffilationIdAndLangId" Method="GetAllAffilationMasterImageDetailsByAffilationIdAndLangId">
+    <Parameter Name="AffilationId" Parameter="affilationId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LangId" Parameter="langId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllAffilationMasterImageDetailsByAffilationIdAndLangIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AffilationId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="LanguageId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="ImageName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertAffilationMasterImageDetails" Method="InsertAffilationMasterImageDetails">
+    <Parameter Name="AffilationId" Parameter="affilationId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LangId" Parameter="langId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="ImageName" Parameter="imageName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="InsertAffilationMasterImageDetailsResult">
+      <Column Name="RecId" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.RemoveAffilationMaster" Method="RemoveAffilationMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveAffilationMasterImageDetails" Method="RemoveAffilationMasterImageDetails">
+    <Parameter Name="AffilationId" Parameter="affilationId" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertOrUpdateAffilationMaster" Method="InsertOrUpdateAffilationMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LangId" Parameter="langId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="MetaTitle" Parameter="metaTitle" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ImagePath" Parameter="imagePath" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="MetaDescription" Parameter="metaDescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AffilationName" Parameter="affilationName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AffilationDescription" Parameter="affilationDescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Username" Parameter="username" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsActive" Parameter="isActive" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="InsertOrUpdateAffilationMasterResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllAffilationMasterByLangId" Method="GetAllAffilationMasterByLangId">
+    <Parameter Name="LangId" Parameter="langId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllAffilationMasterByLangIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AffilationName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AffilationDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MetaTitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MetaDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ImagePath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllAffilationMasterByLangId" Method="GetAllAffilationMasterByLangId1">
+    <Parameter Name="LangId" Parameter="langId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllAffilationMasterByLangIdResult1">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AffilationName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AffilationDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MetaTitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MetaDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ImagePath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="IsVisible" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

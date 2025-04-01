@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehtaAudit" Class="StudentRegDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-05FU2F8;Initial Catalog=UNMehtaAudit;Integrated Security=True" SettingsObjectName="UnMehta.Admission.PaymentScheduler.Properties.Settings" SettingsPropertyName="UNMehtaAuditConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.UpdateStudentRegistrationPaymentDetails" Method="UpdateStudentRegistrationPaymentDetails">
+    <Parameter Name="StudentId" Parameter="studentId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="CourseId" Parameter="courseId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="RegNo" Parameter="regNo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="TxnId" Parameter="txnId" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="amount" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="Status" Parameter="status" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetAllStudentRegistrationDetailsInProcessPaymentStatus" Method="GetAllStudentRegistrationDetailsInProcessPaymentStatus">
+    <ElementType Name="GetAllStudentRegistrationDetailsInProcessPaymentStatusResult">
+      <Column Name="RegistrationId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TxnId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TransactionDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="amount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllRegistrationDetailsListPending" Method="GetAllRegistrationDetailsListPending">
+    <ElementType Name="GetAllRegistrationDetailsListPendingResult">
+      <Column Name="RegistrationId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllRegistrationDetailsListPendingByRegId" Method="GetAllRegistrationDetailsListPendingByRegId">
+    <Parameter Name="regId" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="GetAllRegistrationDetailsListPendingByRegIdResult">
+      <Column Name="RegistrationId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TxnId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TransactionDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="amount" Type="System.Decimal" DbType="Decimal(18,2)" CanBeNull="true" />
+      <Column Name="PaymentStatus" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.UpdateStudentRegistrationDetailsRegistrationId" Method="UpdateStudentRegistrationDetailsRegistrationId">
+    <Parameter Name="RegistrationId" Parameter="registrationId" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="TxnId" Parameter="txnId" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="amount" Type="System.Decimal" DbType="Decimal(18,2)" />
+    <Parameter Name="PaymentStatus" Parameter="paymentStatus" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

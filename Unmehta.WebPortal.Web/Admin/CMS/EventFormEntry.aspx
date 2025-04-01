@@ -1,0 +1,122 @@
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Admin/Admin.Master" AutoEventWireup="true" CodeBehind="EventFormEntry.aspx.cs" Inherits="Unmehta.WebPortal.Web.Admin.CMS.EventFormEntry" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <title>Event <%=strEventName %> Form Details</title>
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="headCss" runat="server">
+</asp:Content>
+<asp:Content ID="Content3" ContentPlaceHolderID="page_header" runat="server">
+    <div class="page-header">
+        <div class="container-fluid d-sm-flex justify-content-between">
+            <h4>Event <%=strEventName %> Form Details</h4>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">  
+                        <a href="#">CMS</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Event <%=strEventName %> Form Details</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="bodyPart" runat="server">
+    <section class="content">
+        <div class="card">
+            <div class="card-body">
+                <!-- Bootstrap alert -->
+                <div class="row">
+                    <div class="form-group col-md-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-9" id="tblSearch">
+                                        <div class="form-group">
+                                            <div class="controls">
+                                                <div class="input-group">
+                                                    <asp:TextBox ID="txtSearch" runat="server" CssClass="serachText form-control" placeholder="Search here..."></asp:TextBox>
+                                                    <span class="input-group-btn">
+                                                        <button runat="server" id="btn_Search" class="btn btn-primary" title="Search" onserverclick="btn_Search_ServerClick">
+                                                            <i class="fa fa-search">&nbsp;Search</i>
+                                                        </button>
+                                                    </span>
+                                                    <span class="input-group-btn">
+                                                        <button runat="server" id="btn_SearchCancel" class="btn btn-inverse" title="Cancel" onserverclick="btn_SearchCancel_ServerClick">
+                                                            <i class="fa fa-remove">&nbsp;Cancel</i>
+                                                        </button>
+                                                    </span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <br />
+                                <br />
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group" style="overflow:scroll;">
+                                            <asp:Button ID="btnExport" runat="server" CssClass="btn btn-primary right" OnClick="btnExport_Click" Text="Export" Style="float: left; margin-bottom: 2px;" />
+                                            <asp:GridView ID="gView" runat="server" DataKeyNames="Id" AutoGenerateColumns="false" CssClass="table table-bordered table-hover table-striped" EmptyDataText="Record does not exist..." AllowPaging="true"  OnPageIndexChanging="gView_PageIndexChanging" OnRowCommand="gView_RowCommand" PageSize="10">
+                                                <Columns>
+                                                    <asp:TemplateField HeaderText="Sr NO." ItemStyle-Width="4%" HeaderStyle-HorizontalAlign="Center" 
+                                                        ItemStyle-HorizontalAlign="Center">
+                                                        <ItemTemplate>
+                                                            <%#Container.DataItemIndex+1  %>
+                                                        </ItemTemplate>
+                                                    </asp:TemplateField>
+                                                    <asp:BoundField DataField="FirstName" HeaderText="First Name" SortExpression="FirstName" />
+                                                    <asp:BoundField DataField="LastName" HeaderText="Last Name" SortExpression="LastName" />
+                                                    <asp:BoundField DataField="SurName" HeaderText="SurName" SortExpression="SurName" />
+                                                    <asp:BoundField DataField="EmailId" HeaderText="Email Id" SortExpression="EmailId" />
+                                                    <asp:BoundField DataField="PhoneNumber" HeaderText="Phone Number" SortExpression="PhoneNumber" />
+                                                    <asp:BoundField DataField="MobileNumber" HeaderText="Mobile Number" SortExpression="MobileNumber" />
+                                                    <asp:BoundField DataField="Gender" HeaderText="Gender" SortExpression="Gender" />
+                                                    <asp:BoundField DataField="BirthDate" HeaderText="Birth Date" SortExpression="BirthDate" />
+                                                    <asp:BoundField DataField="PhysicalDisability" HeaderText="Physical Disability" SortExpression="PhysicalDisability" />
+                                                    <asp:BoundField DataField="ExplainTypeofDisability" HeaderText="Explain Type of Disability" SortExpression="ExplainTypeofDisability" />
+                                                    <asp:BoundField DataField="PhysicalActivity" HeaderText="Physical Activity" SortExpression="PhysicalActivity" />
+                                                    <asp:BoundField DataField="TypeOfIdentity" HeaderText="Identity" SortExpression="TypeOfIdentity" />
+                                                    <asp:BoundField DataField="IdentityNumber" HeaderText="Identity Number" SortExpression="IdentityNumber" />
+                                                    <asp:BoundField DataField="Residential" HeaderText="Residential" SortExpression="Residential" />
+                                                    <asp:BoundField DataField="Country" HeaderText="Country" SortExpression="Country" />
+                                                    <asp:BoundField DataField="State" HeaderText="State" SortExpression="State" />
+                                                    <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
+                                                    <asp:BoundField DataField="PostalCode" HeaderText="PostalCode" SortExpression="PostalCode" />
+                                                    <asp:BoundField DataField="EducationQualification" HeaderText="Education Qualification" SortExpression="EducationQualification" />
+                                                    <asp:BoundField DataField="OrganizationName" HeaderText="Organization Name" SortExpression="OrganizationName" />
+                                                    <asp:BoundField DataField="Designation" HeaderText="Designation" SortExpression="Designation" />
+                                                    <asp:BoundField DataField="EmployeeId" HeaderText="Employee Id" SortExpression="EmployeeId" />
+                                                    <asp:BoundField DataField="JoiningDate" HeaderText="Joining Date" SortExpression="JoiningDate" />
+                                                    <asp:BoundField DataField="NoOfOrganizationYouWorkWith" HeaderText="No Of Organization You Work With" SortExpression="NoOfOrganizationYouWorkWith" />
+                                                    <asp:BoundField DataField="NoOfCNEYouAttend" HeaderText="No Of CNE You Attend" SortExpression="NoOfCNEYouAttend" />
+                                                    <asp:BoundField DataField="NoOfCMEYouAttend" HeaderText="No Of CME You Attend" SortExpression="NoOfCMEYouAttend" />
+                                                    <asp:BoundField DataField="WorkExperience" HeaderText="Work Experience" SortExpression="WorkExperience" />
+                                                    <asp:BoundField DataField="GNCNo" HeaderText="GNCNo" SortExpression="GNCNo" />
+                                                    <asp:BoundField DataField="RegistrtionNo" HeaderText="RegistrtionNo" SortExpression="RegistrtionNo" />
+                                                    <asp:BoundField DataField="WorkProfession" HeaderText="Work Profession" SortExpression="WorkProfession" />
+                                                    
+                                                <asp:TemplateField HeaderText="Action">
+                                                    <ItemTemplate>
+                                                        <div class="btn-group">
+                                                            <asp:LinkButton ID="ibtn_Delete" ToolTip="Delete" CommandName="eDelete" OnClientClick='<%# Eval("FirstName", "return confirm(\"Are you sure want to delete : {0} ? \")") %>' runat="server" SkinID="lDelete" data-original-title="Delete" CssClass="btn btn-sm btn-danger show-tooltip"><i class="fa fa-trash-o"></i></asp:LinkButton>
+                                                          
+                                                        </div>
+                                                    </ItemTemplate>
+                                                    <HeaderStyle HorizontalAlign="Center" />
+                                                </asp:TemplateField>
+                                                </Columns>
+                                            </asp:GridView>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</asp:Content>
+<asp:Content ID="Content5" ContentPlaceHolderID="footerJS" runat="server">
+</asp:Content>

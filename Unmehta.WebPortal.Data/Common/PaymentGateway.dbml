@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="PaymentGatewayDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.21,1433;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.InsertPaymentTransactionRequestMaster" Method="InsertPaymentTransactionRequestMaster">
+    <Parameter Name="PaymentGeneratedUrl" Parameter="paymentGeneratedUrl" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="TransactionCode" Parameter="transactionCode" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="MerchantId" Parameter="merchantId" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="UniTranNo" Parameter="uniTranNo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="NA1" Parameter="nA1" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="TxnAmount" Parameter="txnAmount" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="NA2" Parameter="nA2" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="NA3" Parameter="nA3" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="NA4" Parameter="nA4" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="CurrencyType" Parameter="currencyType" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="NA5" Parameter="nA5" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="TypeField1" Parameter="typeField1" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="SecurityId" Parameter="securityId" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="NA6" Parameter="nA6" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="NA7" Parameter="nA7" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="TypeField2" Parameter="typeField2" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AdditionalInfo1" Parameter="additionalInfo1" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AdditionalInfo2" Parameter="additionalInfo2" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AdditionalInfo3" Parameter="additionalInfo3" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AdditionalInfo4" Parameter="additionalInfo4" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AdditionalInfo5" Parameter="additionalInfo5" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AdditionalInfo6" Parameter="additionalInfo6" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AdditionalInfo7" Parameter="additionalInfo7" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ReturnURL" Parameter="returnURL" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ChecksumKey" Parameter="checksumKey" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="HashValue" Parameter="hashValue" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="MsgText" Parameter="msgText" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="InsertPaymentTransactionRequestMasterResult">
+      <Column Name="RecId" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertPaymentTransactionResponseMaster" Method="InsertPaymentTransactionResponseMaster">
+    <Parameter Name="PaymentPath" Parameter="paymentPath" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="MerchantId" Parameter="merchantId" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="UniTranNo" Parameter="uniTranNo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="TxnReferenceNo" Parameter="txnReferenceNo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="BankReferenceNo" Parameter="bankReferenceNo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="TxnAmount" Parameter="txnAmount" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="BankId" Parameter="bankId" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="BankMerchantId" Parameter="bankMerchantId" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="TxnType" Parameter="txnType" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="CurrencyType" Parameter="currencyType" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ItemCode" Parameter="itemCode" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="SecurityType" Parameter="securityType" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="SecurityId" Parameter="securityId" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="SecurityPasswod" Parameter="securityPasswod" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="TxnDate" Parameter="txnDate" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AuthStatus" Parameter="authStatus" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="SettlementType" Parameter="settlementType" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AdditionalInfo1" Parameter="additionalInfo1" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AdditionalInfo2" Parameter="additionalInfo2" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AdditionalInfo3" Parameter="additionalInfo3" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AdditionalInfo4" Parameter="additionalInfo4" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AdditionalInfo5" Parameter="additionalInfo5" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AdditionalInfo6" Parameter="additionalInfo6" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AdditionalInfo7" Parameter="additionalInfo7" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ErrorStatus" Parameter="errorStatus" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ErrorDescription" Parameter="errorDescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Checksum" Parameter="checksum" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsCheckSumMatch" Parameter="isCheckSumMatch" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="TxRefNo" Parameter="txRefNo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="PgTxnNo" Parameter="pgTxnNo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="TxAmount" Parameter="txAmount" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="TxStatus" Parameter="txStatus" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="TxMssg" Parameter="txMssg" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="PaymentFor" Parameter="paymentFor" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="InsertPaymentTransactionResponseMasterResult">
+      <Column Name="RecId" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.UpdatePaymentTransactionRequestMasterStatus" Method="UpdatePaymentTransactionRequestMasterStatus">
+    <Parameter Name="TransactionCode" Parameter="transactionCode" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="IsHit" Parameter="isHit" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.ValidateTransactionCodeNotDublicate" Method="ValidateTransactionCodeNotDublicate">
+    <Parameter Name="TransactionCode" Parameter="transactionCode" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="ValidateTransactionCodeNotDublicateResult">
+      <Column Name="IsExist" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

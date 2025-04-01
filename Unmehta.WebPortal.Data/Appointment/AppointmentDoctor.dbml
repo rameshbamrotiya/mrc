@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMWeb" Class="AppointmentDoctorDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-B7AUVFOV;Initial Catalog=UNMWeb;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMWebConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GetFacultyCredentials" Method="GetFacultyCredentials">
+    <Parameter Name="FacultyId" Parameter="facultyId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetFacultyCredentialsResult">
+      <Column Name="UserName" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+      <Column Name="UserPassword" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetDoctorIdByUsrId" Method="GetDoctorIdByUsrId">
+    <Parameter Name="UserId" Parameter="userId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="GetDoctorIdByUsrIdResult">
+      <Column Name="DoctorId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertOrUpdateUserWithFacultyDetails" Method="InsertOrUpdateUserWithFacultyDetails">
+    <Parameter Name="RoleId" Parameter="roleId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="UserPassword" Parameter="userPassword" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="FacultyId" Parameter="facultyId" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.CheckFacultyIdExists" Method="CheckFacultyIdExists">
+    <Parameter Name="FacultyId" Parameter="facultyId" Type="System.Int32" DbType="Int" />
+    <ElementType Name="CheckFacultyIdExistsResult">
+      <Column Name="FacultyIdExists" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

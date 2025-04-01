@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="ContributionTransactionMasterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.2;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GetAllContributionTransactionMaster" Method="GetAllContributionTransactionMaster">
+    <ElementType Name="GetAllContributionTransactionMasterResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="TxnId" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Name" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ContactNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DonationType" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PrimaryIdProof" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PrimaryProofNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="PrimaryProofFile" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SecondaryIdProof" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SecondaryProofNo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="SecondaryProofFile" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Amount" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Status" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="TransactionDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="TransactionEndDate" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.UpdateContributionTransactionMasterStatus" Method="UpdateContributionTransactionMasterStatus">
+    <Parameter Name="RecId" Parameter="recId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Status" Parameter="status" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertContributionTransactionMaster" Method="InsertContributionTransactionMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Name" Parameter="name" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="TxnId" Parameter="txnId" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Email" Parameter="email" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ContactNo" Parameter="contactNo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="DonationType" Parameter="donationType" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="PrimaryIdProof" Parameter="primaryIdProof" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="PrimaryProofNo" Parameter="primaryProofNo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="PrimaryProofFile" Parameter="primaryProofFile" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="SecondaryIdProof" Parameter="secondaryIdProof" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="SecondaryProofNo" Parameter="secondaryProofNo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="SecondaryProofFile" Parameter="secondaryProofFile" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Amount" Parameter="amount" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Address" Parameter="address" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="InsertContributionTransactionMasterResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

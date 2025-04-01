@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMWeb" Class="ConfigDetailsDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=LAPTOP-B7AUVFOV;Initial Catalog=UNMWeb;Integrated Security=True;Trust Server Certificate=True" SettingsObjectName="UNnMehta.Appointment.SMSReminder.Properties.Settings" SettingsPropertyName="UNMWebConnectionString" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.InsertSMSLog" Method="InsertSMSLog">
+    <Parameter Name="PatientId" Parameter="patientId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="AppointmentDate" Parameter="appointmentDate" Type="System.DateTime" DbType="Date" />
+    <Parameter Name="MobileNo" Parameter="mobileNo" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="TransectionId" Parameter="transectionId" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="Message" Parameter="message" Type="System.String" DbType="NVarChar(600)" />
+    <Parameter Name="Status" Parameter="status" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="RequestURL" Parameter="requestURL" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="EntryDatetime" Parameter="entryDatetime" Type="System.DateTime" DbType="DateTime" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetConfigdetailsByName" Method="GetConfigdetailsByName">
+    <Parameter Name="ParameterName" Parameter="parameterName" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="GetConfigdetailsByNameResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="ParameterName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ParameterValue" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAppointmentReminderSMSList" Method="GetAppointmentReminderSMSList">
+    <ElementType Name="GetAppointmentReminderSMSListResult">
+      <Column Name="PatientId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="MobileNo" Type="System.String" DbType="NVarChar(12)" CanBeNull="true" />
+      <Column Name="AppointmentDate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="Message" Type="System.String" DbType="NVarChar(375) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+</Database>

@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="RecruitmentEducationTypeMasterDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.21,1433;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString1" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.GetAllEducationTypeMaster" Method="GetAllEducationTypeMaster">
+    <ElementType Name="GetAllEducationTypeMasterResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="TypeName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllRecruitmentAdvertisementEducationTypeDetailsByAddId" Method="GetAllRecruitmentAdvertisementEducationTypeDetailsByAddId">
+    <Parameter Name="AddId" Parameter="addId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllRecruitmentAdvertisementEducationTypeDetailsByAddIdResult">
+      <Column Name="EducationTypeId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertRecruitmentAdvertisementEducationTypeDetails" Method="InsertRecruitmentAdvertisementEducationTypeDetails">
+    <Parameter Name="AddId" Parameter="addId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="EducationTypeId" Parameter="educationTypeId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="InsertRecruitmentAdvertisementEducationTypeDetailsResult">
+      <Column Name="RecId" Type="System.Decimal" DbType="Decimal(38,0)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.RemoveRecruitmentAdvertisementEducationTypeDetailsByAddId" Method="RemoveRecruitmentAdvertisementEducationTypeDetailsByAddId">
+    <Parameter Name="AddId" Parameter="addId" Type="System.Int64" DbType="BigInt" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>

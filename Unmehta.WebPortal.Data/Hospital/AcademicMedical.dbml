@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="UNMehta" Class="AcademicMedicalDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=10.1.159.2;Initial Catalog=UNMehta;User ID=sa" SettingsObjectName="Unmehta.WebPortal.Data.Properties.Settings" SettingsPropertyName="UNMehtaConnectionString2" Provider="System.Data.SqlClient" />
+  <Function Name="dbo.RemoveAcademicMedicalMasterById" Method="RemoveAcademicMedicalMasterById">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemoveAcademicMedicalMasterDoctorDetails" Method="RemoveAcademicMedicalMasterDoctorDetails">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.InsertOrUpdateAcademicMedicalMaster" Method="InsertOrUpdateAcademicMedicalMaster">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="MetaTitle" Parameter="metaTitle" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="MetaDescription" Parameter="metaDescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AcademicsName" Parameter="academicsName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AcademicsFullName" Parameter="academicsFullName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="AcademicsDescription" Parameter="academicsDescription" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="ImagePath" Parameter="imagePath" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <ElementType Name="InsertOrUpdateAcademicMedicalMasterResult">
+      <Column Name="RecId" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAllAcademicMedicalMaster" Method="GetAllAcademicMedicalMaster">
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAllAcademicMedicalMasterResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AcademicsName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AcademicsFullName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AcademicsDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MetaTitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MetaDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ImagePath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="FilePath" Type="System.String" DbType="NVarChar(MAX) NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAcademicMedicalMasterByIdAndLangId" Method="GetAcademicMedicalMasterByIdAndLangId">
+    <Parameter Name="Id" Parameter="id" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LangId" Parameter="langId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAcademicMedicalMasterByIdAndLangIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AcademicsName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AcademicsFullName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="AcademicsDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MetaTitle" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="MetaDescription" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ImagePath" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetAcademicMedicalMasterDoctorDetailsByAccIdAndLanId" Method="GetAcademicMedicalMasterDoctorDetailsByAccIdAndLanId">
+    <Parameter Name="AccId" Parameter="accId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LanId" Parameter="lanId" Type="System.Int64" DbType="BigInt" />
+    <ElementType Name="GetAcademicMedicalMasterDoctorDetailsByAccIdAndLanIdResult">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Year" Type="System.Int64" DbType="BigInt" CanBeNull="true" />
+      <Column Name="StudentName" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="DegreeHead" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Photo" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.InsertAcademicMedicalMasterDoctorDetails" Method="InsertAcademicMedicalMasterDoctorDetails">
+    <Parameter Name="AcademicsId" Parameter="academicsId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="LanguageId" Parameter="languageId" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="Year" Parameter="year" Type="System.Int64" DbType="BigInt" />
+    <Parameter Name="UserName" Parameter="userName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="StudentName" Parameter="studentName" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="DegreeHead" Parameter="degreeHead" Type="System.String" DbType="NVarChar(MAX)" />
+    <Parameter Name="Photo" Parameter="photo" Type="System.String" DbType="NVarChar(MAX)" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
